@@ -52,7 +52,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="z-10 flex shadow-md lg:justify-around justify-between items-center w-full h-20 px-10 fixed bg-slate-900">
+    <nav className="z-50 flex shadow-md lg:justify-around justify-between items-center w-full h-20 px-10 fixed bg-zinc-50 dark:bg-slate-900 ">
       <div>
         <h1 className="text-3xl font-black ml-2">Logo</h1>
       </div>

@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth focus:scroll-auto">
       <body
-        className={`${poppins.className}  bg-zinc-100 dark:bg-slate-950 dark:text-white text-black`}
+        className={`${poppins.className}  bg-zinc-100 dark:bg-slate-950 text-slate-800 dark:text-zinc-100`}
       >
         {children}
       </body>
