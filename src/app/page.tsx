@@ -3,12 +3,12 @@ import Link from 'next/link'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
       <div className="flex-grow">
-        <Navbar />
         <section
           id="about"
           className="py-10 grid place-items-center min-h-screen"
@@ -68,6 +68,9 @@ export default function Home() {
               }}
             />
           </div>
+        </section>
+        <section id="contact">
+          <Contact />
         </section>
       </div>
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import project from '/public/images/digitalpatienttwin.jpeg'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
 type projectProps = {
   title: string
-  image: StaticImageData
+  image: string
   link: string
 }
 
@@ -14,13 +14,14 @@ const Projects = ({ project }: { project: projectProps }) => {
       <Image
         src={project.image}
         alt={project.title}
-        width={0}
-        height={0}
+        width={400} // Adjust width according to your design
+        height={300} // Adjust height according to your design
         className="aspect-contain object-cover w-full h-auto rounded-xl"
       />
       <h1 className="text-2xl font-bold mt-4">Digital Patient Twin</h1>
       <a href={project.link}>
-        <button className="bg-gradient-to-r from-teal-300 to-teal-600 text-white px-4 py-2 rounded-md mt-4">
+        <br />
+        <button className="transform rounded-md  bg-teal-800 text-teal-400 px-5 py-3 font-medium transition-colors hover:bg-teal-700 transition-colors duration-200">
           View Project
         </button>
       </a>
