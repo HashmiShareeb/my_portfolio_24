@@ -1,29 +1,30 @@
 import React from 'react'
-import { ExternalLink, File, Folder, GitBranch, GithubIcon } from 'lucide-react'
-import project from '../images/digitalpatienttwin.jpeg'
-import Image from 'next/image'
+import project from '/public/images/digitalpatienttwin.jpeg'
+import Image, { StaticImageData } from 'next/image'
 
-const Projects = () => {
+type projectProps = {
+  title: string
+  image: StaticImageData
+  link: string
+}
+
+const Projects = ({ project }: { project: projectProps }) => {
   return (
-    <section className="px-10 md:px-20 lg:px-40">
-      <div className="mx-auto max-w-md overflow-hidden rounded-lg dark:bg-slate-900  bg-white shadow">
-        <Image
-          src={project}
-          className="aspect-video w-full object-cover"
-          alt="digital patient twin"
-        />
-        <div className="p-4">
-          <p className="mb-1 text-sm">
-            <Folder size={16} className="inline-block mr-3" />
-            <span className="">Projects</span>
-          </p>
-          <h3 className="text-xl font-medium">Digital Patient Twin</h3>
-          <p className="mt-1 ">
-            <span className="text-sm">Description:</span>
-          </p>
-        </div>
-      </div>
-    </section>
+    <div className="mt-8">
+      <Image
+        src={project.image}
+        alt={project.title}
+        width={0}
+        height={0}
+        className="aspect-contain object-cover w-full h-auto rounded-xl"
+      />
+      <h1 className="text-2xl font-bold mt-4">Digital Patient Twin</h1>
+      <a href={project.link}>
+        <button className="bg-gradient-to-r from-teal-300 to-teal-600 text-white px-4 py-2 rounded-md mt-4">
+          View Project
+        </button>
+      </a>
+    </div>
   )
 }
 

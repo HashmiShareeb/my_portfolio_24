@@ -9,7 +9,10 @@ export default function Home() {
     <main className="flex flex-col min-h-screen">
       <div className="flex-grow">
         <Navbar />
-        <section id="about" className="py-10 grid place-items-center h-screen">
+        <section
+          id="about"
+          className="py-10 grid place-items-center min-h-screen"
+        >
           <div className="mx-auto max-w-2xl">
             <div className="mx-auto mb-8 lg:mt-10 mt-20 h-56 w-56 overflow-hidden rounded-full bg-gradient-to-tr from-teal-300 to-blue-500">
               <Image width={500} height={500} src="" alt="Shareeb Hashmi" />
@@ -52,9 +55,18 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="projects" className="py-10 flex-grow flex justify-center">
-          <div className="grid place-items-center grid-cols-2">
-            <Projects />
+        <section id="projects" className="px-10 md:px-20 lg:px-40 m-8">
+          <h1 className="lg:text-5xl text-3xl text-nowrap font-extrabold leading-10 tracking-tight">
+            Featured Projects
+          </h1>
+          <div className="flex flex-col lg:flex-row gap-10">
+            <Projects
+              project={{
+                title: 'Digital Patient Twin',
+                image: '/images/digitalpatienttwin.jpeg',
+                link: '/projects/digital-patient-twin',
+              }}
+            />
           </div>
         </section>
       </div>
