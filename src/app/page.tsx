@@ -4,77 +4,36 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
+import Intro from './components/Intro'
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
-      <div className="flex-grow">
-        <section
-          id="about"
-          className="py-10 grid place-items-center min-h-screen"
-        >
-          <div className="mx-auto max-w-2xl">
-            <div className="mx-auto mb-8 lg:mt-10 mt-20 h-56 w-56 overflow-hidden rounded-full bg-gradient-to-tr from-teal-300 to-blue-500">
-              <Image width={500} height={500} src="" alt="Shareeb Hashmi" />
-            </div>
-            <div className="text-center">
-              <h1 className="lg:text-7xl md:text-5xl text-4xl text-nowrap font-extrabold leading-10 tracking-tight">
-                Shareeb Hashmi
-              </h1>
-              <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-gradient-to-r from-teal-300 to-blue-500 bg-clip-text text-transparent">
-                Web developer
-              </h2>
-              <p className="mt-4 text-lg leading-relaxed text-slate-400">
-                I&apos;m a graduate in MIT currently studying{' '}
-                <Link
-                  href="https://mct.be/"
-                  target="_blank"
-                  className="text-teal-500 hover:underline hover:text-teal-400 transition-colors"
-                >
-                  MCT-Next Web Developer{' '}
-                </Link>
-                in Howest in Belgium. I have a passion for web development and
-                love to create new things. I am a fast learner and always eager
-                to something new or face challenges.
-              </p>
-            </div>
-
-            <div className="mt-6 flex items-center justify-center gap-4">
-              <Link
-                href={''}
-                className="transform rounded-md  bg-teal-800 text-teal-400 px-5 py-3 font-medium transition-colors hover:bg-teal-700 transition-colors duration-200"
-              >
-                {' '}
-                More about me{' '}
-              </Link>
-
-              <Link href="#" className="group  transition duration-300">
-                Download Resume
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 dark:bg-white bg-black"></span>
-              </Link>
-            </div>
-          </div>
-        </section>
-        <section id="projects" className="px-10 md:px-20 lg:px-40 m-8">
-          <h1 className="lg:text-5xl text-3xl text-nowrap font-extrabold leading-10 tracking-tight">
-            Featured Projects
-          </h1>
-          <div className="flex flex-col lg:flex-row gap-10">
-            <Projects
-              project={{
-                title: 'Digital Patient Twin',
-                image: '/images/digitalpatienttwin.jpeg',
-                link: '/projects/digital-patient-twin',
-              }}
-            />
-          </div>
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
-      </div>
-
-      <Footer />
+    <main>
+      <section
+        id="about"
+        className="py-10 grid place-items-center min-h-screen "
+      >
+        <Intro />
+      </section>
+      <section id="projects" className="px-10 md:px-20 lg:px-40 m-8">
+        <h1 className="mt-8 text-4xl lg:text-6xl font-bold  text-transparent">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
+            Projects
+          </span>
+        </h1>
+        <div className="flex flex-col lg:flex-row gap-10">
+          <Projects
+            project={{
+              title: 'Digital Patient Twin',
+              image: '/images/digitalpatienttwin.jpeg',
+              link: '/project/digital-patient-twin',
+            }}
+          />
+        </div>
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
     </main>
   )
 }

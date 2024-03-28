@@ -10,13 +10,13 @@ type projectProps = {
 
 const Projects = ({ project }: { project: projectProps }) => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 hover:scale-105 transition-transform ease-in">
       <Image
         src={project.image}
         alt={project.title}
         width={400} // Adjust width according to your design
         height={300} // Adjust height according to your design
-        className="aspect-contain object-cover w-full h-auto rounded-xl"
+        className="aspect-video object-cover w-full h-auto rounded-xl"
       />
       <h1 className="text-2xl font-bold mt-4">Digital Patient Twin</h1>
       <a href={project.link}>

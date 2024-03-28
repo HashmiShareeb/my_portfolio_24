@@ -54,14 +54,16 @@ const Navbar = () => {
   return (
     <nav className="z-50 flex shadow-md lg:justify-between justify-between items-center w-full h-20 px-10 fixed bg-zinc-50 dark:bg-slate-950 ">
       <div>
-        <h1 className="text-3xl font-black ml-2">SH</h1>
+        <h1 className="text-2xl font-black ml-2">
+          <a href="/">Shareeb Hashmi</a>
+        </h1>
       </div>
 
       <ul className="hidden lg:flex">
         {links.map(({ id, label, sectionId }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize py-6 text-2xl"
+            className="px-4 cursor-pointer capitalize py-6 text-lg font-semibold hover:text-teal-500 transition-all duration-300 ease-in-out"
             onClick={() => scrollToSection(sectionId)}
           >
             {label}
