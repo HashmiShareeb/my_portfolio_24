@@ -1,5 +1,5 @@
 'use client'
-import { Menu, X } from 'lucide-react'
+import { AlignLeftIcon, Menu, MenuIcon, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const Navbar = () => {
@@ -52,7 +52,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="z-50 flex shadow-md lg:justify-between justify-between items-center w-full h-20 px-10 fixed bg-zinc-50 dark:bg-slate-950 ">
+    <nav className="z-50 flex shadow-md   justify-between items-center w-full h-20 px-10 fixed bg-zinc-50 dark:bg-slate-900 ">
       <div>
         <h1 className="text-2xl font-black ml-2">
           <a href="/">Shareeb Hashmi</a>
@@ -73,9 +73,9 @@ const Navbar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-teal-500 lg:hidden transition-all duration-300 ease-in-out hover:text-white hover:scale-110"
+        className="cursor-pointer pr-4 z-10  lg:hidden transition-all duration-300 ease-in-out hover:text-teal-500 hover:scale-110"
       >
-        {nav ? <X size={30} /> : <Menu size={30} />}
+        {nav ? <X size={30} /> : <AlignLeftIcon size={30} />}
       </div>
 
       {nav && (

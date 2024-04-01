@@ -7,7 +7,7 @@ type Props = {}
 
 const Intro = (props: Props) => {
   return (
-    <div className="mx-auto max-w-2xl">
+    <div className="mx-auto max-w-2xl lg:py-28 py-20">
       <div className="mx-auto mb-8 lg:mt-10 mt-20 h-56 w-56 overflow-hidden rounded-full bg-gradient-to-tr from-teal-300 to-blue-500">
         <Image width={500} height={500} src="" alt="Shareeb Hashmi" />
       </div>
