@@ -9,7 +9,7 @@ import Paragraph from './components/Text/Paragraph'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen  ">
       <section id="about">
         <Intro />
       </section>
@@ -40,7 +40,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="contact">
+      <section id="contact" className="px-10 md:px-20 lg:py-20 lg:px-40 m-8">
         <Contact />
       </section>
     </main>
