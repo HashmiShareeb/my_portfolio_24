@@ -5,9 +5,11 @@ import Paragraph from './Text/Paragraph'
 type Props = {}
 const Contact = () => {
   return (
-    <div className="grid place-items-center px-10 md:px-20 lg:px-40 m-8">
-      <h1 className="lg:text-5xl text-3xl text-nowrap font-extrabold leading-10 tracking-tight">
-        Get in touch with me!
+    <div className="grid place-items-center m-8">
+      <h1 className="text-4xl lg:text-6xl font-bold  text-transparent">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
+          Contact me
+        </span>
       </h1>
       <div className="mt-4">
         <Paragraph text="I am always open to new opportunities and collaborations. Feel free to reach out to me if you have any questions or just want to say hi." />

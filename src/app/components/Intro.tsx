@@ -18,7 +18,7 @@ const Intro = (props: Props) => {
         <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-gradient-to-r from-teal-300 to-blue-500 bg-clip-text text-transparent">
           Web developer
         </h2>
-        <p className="mt-4 text-lg leading-relaxed text-slate-400">
+        <p className="mt-4 text-lg leading-relaxed text-slate-400 ">
           I&apos;m a graduate in MIT currently studying{' '}
           <a
             href="https://mct.be/"

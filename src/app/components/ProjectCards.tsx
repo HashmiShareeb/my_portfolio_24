@@ -1,51 +1,39 @@
 import React from 'react'
-import project from '/public/images/digitalpatienttwin.jpeg'
-import Image from 'next/image'
 
-type projectProps = {
+type ProjectProps = {
   title: string
   image: string
   link: string
+  description?: string
 }
 
-const ProjectCards = ({ project }: { project: projectProps }) => {
+const ProjectCards = ({ project }: { project: ProjectProps }) => {
   return (
-    <div className="py-4 py-4">
-      <div className="block md:flex justify-between md:-mx-2">
-        <div className="w-full h-auto mb-4 md:mb-0">
-          <div className="dark:bg-slate-800 bg-zinc-50 rounded-lg overflow-hidden shadow dark:shadow-none relative">
-            <img
-              className="lg:h-96 h-auto w-full object-cover object-center"
-              src={project.image}
-              alt=""
-            />
-            <div className="p-4 h-auto md:h-40 lg:h-48">
-              <a
-                href={project.link}
-                className="block font-bold mb-2 text-lg md:text-base lg:text-lg capitalize"
-              >
-                {project.title}
-              </a>
-              {/* <div className="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
-                
-              </div> */}
-              {/* <div className="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-                <a
-                  className="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                  href="#"
-                >
-                  #something
-                </a>
-                <a
-                  className="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                  href="#"
-                >
-                  #sky
-                </a>
-              </div> */}
-            </div>
-          </div>
-        </div>
+    <div className="py-4">
+      <div>
+        <picture>
+          <source srcSet={project.image} type="image/webp" />
+          <img
+            src={project.image}
+            alt={project.title}
+            className="rounded-xl object-cover object-center shadow-lg dark:shadow-none
+            w-[400px] h-96"
+          />
+        </picture>
+      </div>
+      <div className="mt-4">
+        <h2 className="text-2xl font-bold text-transparent">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
+            {project.title}
+          </span>
+        </h2>
+        <p className="text-slate-400">{project.description}</p>
+        <a
+          href={project.link}
+          className="text-teal-500 hover:underline hover:text-teal-400 transition-colors"
+        >
+          Read more
+        </a>
       </div>
     </div>
   )

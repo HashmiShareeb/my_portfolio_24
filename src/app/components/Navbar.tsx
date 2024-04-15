@@ -1,96 +1,107 @@
 'use client'
-import { AlignLeftIcon, Menu, MenuIcon, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import Link from 'next/link'
 
-const Navbar = () => {
-  const [nav, setNav] = useState(false)
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
 
-  const handleResize = () => {
-    if (window.innerWidth >= 768) {
-      // Assuming 768px is your md breakpoint
-      setNav(false)
-    }
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
   }
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize)
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id)
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' })
-    }
-    setNav(false) // Close navbar after clicking a link
+  const closeMenu = () => {
+    setIsOpen(false)
   }
-
-  const links = [
-    {
-      id: 1,
-      label: 'About',
-      sectionId: 'about',
-    },
-    {
-      id: 2,
-      label: 'Projects',
-      sectionId: 'projects',
-    },
-    {
-      id: 3,
-      label: 'Experience',
-      sectionId: 'experience',
-    },
-    {
-      id: 4,
-      label: 'Contact',
-      sectionId: 'contact',
-    },
-  ]
 
   return (
-    <nav className="z-50 flex shadow-md   justify-between items-center w-full h-20 px-10 fixed bg-zinc-50 dark:bg-slate-900 ">
-      <div>
-        <h1 className="text-2xl font-black ml-2">
-          <a href="/">Shareeb Hashmi</a>
-        </h1>
-      </div>
-
-      <ul className="hidden lg:flex">
-        {links.map(({ id, label, sectionId }) => (
-          <li
-            key={id}
-            className="px-4 cursor-pointer capitalize py-6 text-lg font-semibold hover:text-teal-500 transition-all duration-300 ease-in-out"
-            onClick={() => scrollToSection(sectionId)}
-          >
-            {label}
-          </li>
-        ))}
-      </ul>
-
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10  lg:hidden transition-all duration-300 ease-in-out hover:text-teal-500 hover:scale-110"
-      >
-        {nav ? <X size={30} /> : <AlignLeftIcon size={30} />}
-      </div>
-
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500 transition-all duration-300 ease-in-out">
-          {links.map(({ id, label, sectionId }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
-              onClick={() => scrollToSection(sectionId)}
+    <nav className="bg-gray-800 w-full fixed z-10">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            <div className="flex-shrink-0 flex items-center">
+              <Link href="/">
+                <span className="text-white font-bold" onClick={closeMenu}>
+                  Logo
+                </span>
+              </Link>
+            </div>
+          </div>
+          <div className="flex items-center md:hidden">
+            <button
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
+              onClick={toggleMenu}
             >
-              {label}
-            </li>
-          ))}
-        </ul>
-      )}
+              <svg
+                className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+              <svg
+                className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* Mobile menu */}
+      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <Link href="/">
+            <span
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              onClick={closeMenu}
+            >
+              Home
+            </span>
+          </Link>
+          <Link href="/#about">
+            <span
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              onClick={closeMenu}
+            >
+              About
+            </span>
+          </Link>
+          <Link href="/#projects">
+            <span
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              onClick={closeMenu}
+            >
+              Projects
+            </span>
+          </Link>
+          <Link href="/#contact">
+            <span
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              onClick={closeMenu}
+            >
+              Contact
+            </span>
+          </Link>
+
+          {/* Add more links as needed */}
+        </div>
+      </div>
     </nav>
   )
 }
