@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <nav className="bg-gray-800 w-full fixed z-10">
+    <nav className="bg-gray-800 w-full z-10 bg-fixed">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex">
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
           </div>
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center md:hidden ">
             <button
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
               onClick={toggleMenu}

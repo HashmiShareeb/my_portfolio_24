@@ -22,11 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth focus:scroll-auto">
       <body
-        className={`${poppins.className}  bg-zinc-100 dark:bg-slate-950 text-slate-600 dark:text-zinc-100 transition-colors duration-200`}
+        className={`${poppins.className}  bg-zinc-100 dark:bg-slate-950 text-slate-600 dark:text-zinc-100 transition-colors duration-200 `}
       >
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )

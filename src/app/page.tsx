@@ -22,40 +22,10 @@ export default function Home() {
     // Add more projects as needed
   ]
   return (
-    <main className="min-h-screen  ">
-      <section id="about">
-        <Intro />
-      </section>
-      <section id="projects" className="px-10 md:px-20 lg:py-20 lg:px-40 m-8">
-        <h1 className="text-4xl lg:text-6xl font-bold  text-transparent">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
-            Projects
-          </span>
-        </h1>
-
-        <p className="text-md text-left leading-relaxed text-slate-400">
-          some projects are still in development!
-        </p>
-        <div className="flex flex-col lg:flex-row gap-10">
-          <Projects
-            project={{
-              title: 'Digital Patient Twin',
-              image: '/images/digitalpatienttwin.jpeg',
-              description:
-                'A project that aims to create a digital twin of a patient to help doctors diagnose and treat patients more effectively.',
-
-              link: '/project/digital-patient-twin',
-            }}
-          />
-          {/* placeholder project component in development */}
-          {projects.map((project, i) => (
-            <ProjectCards key={i} project={project} />
-          ))}
-        </div>
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
+    <main className="flex flex-col items-center px-4">
+      <Intro />
+      <ProjectCards project={projects[0]} />
+      {/* <Contact /> */}
     </main>
   )
 }
