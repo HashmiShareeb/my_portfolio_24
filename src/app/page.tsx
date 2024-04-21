@@ -1,31 +1,43 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import Navbar from './components/Navbar'
 import Projects from './components/ProjectCards'
-import Footer from './components/Footer'
 import Contact from './components/Contact'
 import Intro from './components/Intro'
-import Paragraph from './components/Text/Paragraph'
-import { Mail } from 'lucide-react'
-import ProjectCards from './components/ProjectCards'
 
 export default function Home() {
   const projects = [
     {
       title: 'The Movie App',
-      image: 'images/themovieapp.png',
-      link: '#',
+      image: 'images/movieappmockup.png',
+      link: '/project/1',
       description:
         'An app that shows the latest movies with movie ratings and a searchbar to search for your favorite movies. This app is made with the The Movie Database (TMDb) API. there is a lightmode option aswell but it is based on the settings of your device/sytem which the darkmode or lightmode is applied.',
+    },
+    {
+      title: 'The Weather App',
+      image: 'images/weatherapp.png',
+      link: '',
+      description:
+        'An app that shows the current weather and the weather forecast for the next 7 days. This app is made with the OpenWeatherMap API. there is a lightmode option aswell but it is based on the settings of your device/sytem which the darkmode or lightmode is applied.',
+    },
+    {
+      title: 'The Calculator App',
+      image: 'images/calculatorapp.png',
+      link: '#',
+      description:
+        'A calculator app that can do basic math operations like addition, subtraction, multiplication and division. This app is made with React.js and TailwindCSS. there is a lightmode option aswell but it is based on the settings of your device/sytem which the darkmode or lightmode is applied.',
     },
 
     // Add more projects as needed
   ]
   return (
-    <main className="flex flex-col items-center px-4">
+    <main className="flex flex-col items-center px-4 ">
+      {/* hero (intro) */}
       <Intro />
-      <ProjectCards project={projects[0]} />
-      {/* <Contact /> */}
+      {/* projects */}
+      {projects.map((project, index) => (
+        <Projects key={index} project={project} />
+      ))}
+      {/* contact */}
+      <Contact />
     </main>
   )
 }

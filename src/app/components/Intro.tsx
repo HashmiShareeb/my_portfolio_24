@@ -28,14 +28,14 @@ const Intro = () => {
             type: 'tween',
             duration: 0.5,
           }}
-          className="mb-8 lg:mt-10 mt-20 h-56 w-56 overflow-hidden rounded-full bg-gradient-to-tr from-teal-300 to-blue-500"
+          // className="mb-8 lg:mt-10 mt-20 h-56 w-56 overflow-hidden rounded-full bg-gradient-to-tr from-teal-300 to-blue-500"
         >
           <Image
-            src="/images/themovieapp.png"
+            src=""
             alt="Shareeb portrait"
             width={500}
             height={500}
-            className="rounded-full h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
+            className="rounded-full my-20 h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
             quality={95}
             priority={true}
           />

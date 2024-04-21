@@ -1,6 +1,5 @@
 import { Mail } from 'lucide-react'
 import React from 'react'
-import Paragraph from './Text/Paragraph'
 
 const Contact = () => {
   return (
@@ -12,7 +11,10 @@ const Contact = () => {
           </span>
         </h1>
         <div className="mt-4">
-          <Paragraph text="I am always open to new opportunities and collaborations. Feel free to reach out to me if you have any questions or just want to say hi." />
+          <p className="text-md text-center leading-relaxed text-slate-400">
+            I am always open to new opportunities and collaborations. Feel free
+            to reach out to me if you have any questions or just want to say hi.
+          </p>
           <div className="mt-4 flex items-center justify-center gap-4">
             <a
               href="mailto:shareeb.hashmi@student.howest.be"

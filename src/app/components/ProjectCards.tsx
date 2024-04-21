@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { CldImage } from 'next-cloudinary'
 
 type ProjectProps = {
   title: string
@@ -15,13 +16,19 @@ const ProjectCards = ({ project }: { project: ProjectProps }) => {
       transition={{ delay: 0.2, duration: 0.5 }}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      id="#projects"
+      id="project"
       className="px-4 py-24"
     >
       <span className="hover:scale-100">
-        <h1>Feauted Projects</h1>
         <div className="py-4">
           <div>
+            {/* <CldImage
+              width="960"
+              height="600"
+              src="themovieapp_rbjdme"
+              sizes="100vw"
+              alt="Description of my image"
+            /> */}
             <picture>
               <source srcSet={project.image} type="image/webp" />
               <img
