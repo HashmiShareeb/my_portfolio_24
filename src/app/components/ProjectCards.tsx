@@ -1,41 +1,32 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
-import { CldImage } from 'next-cloudinary'
+import projectData, { ProjectData } from '../data'
 
-type ProjectProps = {
-  title: string
-  image: string
-  link: string
-  description?: string
-}
-
-const ProjectCards = ({ project }: { project: ProjectProps }) => {
+const ProjectCards = () => {
   return (
     <motion.section
       transition={{ delay: 0.2, duration: 0.5 }}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      id="project"
-      className="px-4 py-24"
+      id="projects"
+      className="px-4 py-24 flex gap-10 flex-col lg:flex-row"
     >
-      <span className="hover:scale-100">
-        <div className="py-4">
+      {projectData.map((project: ProjectData) => (
+        <motion.div
+          className="py-4 "
+          key={project.id}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          
+        >
           <div>
-            {/* <CldImage
-              width="960"
-              height="600"
-              src="themovieapp_rbjdme"
-              sizes="100vw"
-              alt="Description of my image"
-            /> */}
             <picture>
               <source srcSet={project.image} type="image/webp" />
               <img
                 src={project.image}
                 alt={project.title}
-                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none
-            w-[400px] h-96"
+                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-[400px] h-96"
               />
             </picture>
           </div>
@@ -47,14 +38,14 @@ const ProjectCards = ({ project }: { project: ProjectProps }) => {
             </h2>
             {/* <p className="text-slate-400">{project.description}</p> */}
             <a
-              href={project.link}
+              href={'/project/' + project.id}
               className="text-teal-500 hover:underline hover:text-teal-400 transition-colors"
             >
               Read more
             </a>
           </div>
-        </div>
-      </span>
+        </motion.div>
+      ))}
     </motion.section>
   )
 }
