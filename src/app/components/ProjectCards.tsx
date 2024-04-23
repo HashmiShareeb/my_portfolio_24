@@ -13,13 +13,7 @@ const ProjectCards = () => {
       className="px-4 py-24 flex gap-10 flex-col lg:flex-row"
     >
       {projectData.map((project: ProjectData) => (
-        <motion.div
-          className="py-4 "
-          key={project.id}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          
-        >
+        <div className="py-4 " key={project.id}>
           <div>
             <picture>
               <source srcSet={project.image} type="image/webp" />
@@ -44,7 +38,7 @@ const ProjectCards = () => {
               Read more
             </a>
           </div>
-        </motion.div>
+        </div>
       ))}
     </motion.section>
   )

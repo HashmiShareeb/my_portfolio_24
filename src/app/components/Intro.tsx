@@ -41,7 +41,7 @@ const Intro = () => {
           />
         </motion.div>
         <span className="mb-4">👋 Hello there!</span>
-        <h1 className="lg:text-7xl md:text-5xl text-4xl text-nowrap font-extrabold leading-10 tracking-tight">
+        <h1 className="lg:text-6xl md:text-4xl text-3xl text-nowrap font-extrabold leading-10 tracking-tight">
           Shareeb Hashmi
         </h1>
         <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-gradient-to-r from-teal-300 to-blue-500 bg-clip-text text-transparent">
@@ -72,7 +72,7 @@ const Intro = () => {
         things. I am a fast learner and always eager to something new or face
         challenges.
       </motion.p>
-      <div className="mt-6 flex lg:flex-row flex-col items-center justify-center gap-10">
+      <div className="mt-6 flex lg:flex-row selection  items-center justify-center gap-10">
         {/* <Link
           href="#contact"
           className="rounded-md bg-teal-800 text-teal-400  transition-colors duration-100 px-5 py-3"

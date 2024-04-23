@@ -1,8 +1,8 @@
 'use client'
-import { Earth, Github, WholeWord, WholeWordIcon } from 'lucide-react'
+import { Earth, Github } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { use, useEffect, useState } from 'react'
+import React from 'react'
 
 const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
   return (
