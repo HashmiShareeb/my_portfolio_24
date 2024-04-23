@@ -12,7 +12,7 @@ const Intro = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       id="#about"
-      className="max-w-xl"
+      className="max-w-xl flex flex-col items-center justify-center mx-auto px-4"
     >
       <div className="flex flex-col items-center justify-center">
         <motion.div
@@ -35,13 +35,13 @@ const Intro = () => {
             alt="Shareeb portrait"
             width={500}
             height={500}
-            className="rounded-full my-20 h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
+            className="rounded-full my-16 h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
             quality={95}
             priority={true}
           />
         </motion.div>
         <span className="mb-4">👋 Hello there!</span>
-        <h1 className="lg:text-6xl md:text-4xl text-3xl text-nowrap font-extrabold leading-10 tracking-tight">
+        <h1 className="lg:text-6xl md:text-4xl text-3xl text-nowrap font-extrabold leading-relaxed tracking-tight">
           Shareeb Hashmi
         </h1>
         <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-gradient-to-r from-teal-300 to-blue-500 bg-clip-text text-transparent">
@@ -72,7 +72,7 @@ const Intro = () => {
         things. I am a fast learner and always eager to something new or face
         challenges.
       </motion.p>
-      <div className="mt-6 flex lg:flex-row selection  items-center justify-center gap-10">
+      <div className="flex lg:flex-row selection  items-center justify-center gap-10">
         {/* <Link
           href="#contact"
           className="rounded-md bg-teal-800 text-teal-400  transition-colors duration-100 px-5 py-3"

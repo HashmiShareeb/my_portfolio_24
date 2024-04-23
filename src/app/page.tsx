@@ -31,7 +31,7 @@ export default function Home() {
   //   // Add more projects as needed
   // ]
   return (
-    <main className="flex flex-col items-center px-4 ">
+    <main className="flex flex-col lg:px-52 px-4 ">
       {/* hero (intro) */}
       <Intro />
       {/* projects */}
