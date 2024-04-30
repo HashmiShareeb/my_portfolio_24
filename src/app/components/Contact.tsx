@@ -3,7 +3,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-slate-950 text-zinc-100">
+    <section id="contact">
       <div className="grid place-items-center m-8">
         <h1 className="text-4xl lg:text-5xl font-bold  text-transparent">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">

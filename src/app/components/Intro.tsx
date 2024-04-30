@@ -35,7 +35,7 @@ const Intro = () => {
             alt="Shareeb portrait"
             width={500}
             height={500}
-            className="rounded-full my-16 h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
+            className="rounded-full my-20 h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
             quality={95}
             priority={true}
           />

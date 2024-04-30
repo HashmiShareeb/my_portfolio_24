@@ -16,22 +16,38 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
   }
 
   return (
-    <section className="min-h-screen">
+    <motion.section
+      transition={{ delay: 0.2, duration: 0.5 }}
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="min-h-screen"
+    >
       <Image
         src={project.image}
         alt={project.title}
         width={960}
         height={600}
         quality={100}
-        className="mx-auto lg:rounded-md"
+        className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none"
         priority={true}
       />
-      <div className="px-4 lg:px-64">
-        <h2 className="text-2xl font-bold text-transparent my-4">
+      <div className="px-4 lg:px-80">
+        <h2
+          className="text-2xl font-bold text-transparent 
+           -mt-8 mb-4"
+        >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
             {project.title}
           </span>
         </h2>
+        {/* tags */}
+        <div className="flex flex-wrap gap-4">
+          {project.tags.map(tag => (
+            <span key={tag} className="py-1 font-mono mb-4 dark:text-slate-400">
+              {tag}
+            </span>
+          ))}
+        </div>
         <p className="text-md leading-relaxed  dark:text-slate-400 font-medium">
           {project.description}
         </p>
@@ -78,7 +94,7 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
           )}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

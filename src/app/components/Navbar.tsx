@@ -13,96 +13,96 @@ const Navbar: React.FC = () => {
     setIsOpen(false)
   }
 
+  //is active
+  const isActive = (href: string) => {
+    return window.location.pathname === href ? 'active' : ''
+  }
+
   return (
-    <nav className="dark:bg-gray-900 bg-white w-full">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link href="/">
-                <span
-                  className="text-white font-bold lg:text-2xl"
-                  onClick={closeMenu}
-                >
-                  Shareeb <span className="text-teal-400">Hashmi</span>
-                </span>
-              </Link>
-            </div>
-          </div>
-          <div className="flex items-center ">
-            <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
-              onClick={toggleMenu}
+    <nav className="z-[999] relative">
+      <div className="fixed top-0  h-[3.5rem] w-full bg-white dark:bg-slate-900 bg-opacity-80 backdrop-blur-[0.5rem] shadow-sm">
+        <div className="flex items-center justify-between h-full px-4">
+          <Link href="/" className="text-lg font-bold">
+            Shareeb <span className="text-teal-500 font-extrabold">Hashmi</span>
+          </Link>
+          <button
+            onClick={toggleMenu}
+            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-teal-500 hover:dark:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
             >
-              <svg
-                className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-              <svg
-                className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+            <svg
+              className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-      {/* Mobile menu */}
-      <div className={`${isOpen ? 'block' : 'hidden'} block`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <Link href="/">
-            <span
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              onClick={closeMenu}
-            >
-              Home
-            </span>
+      <div
+        className={`${
+          isOpen ? 'block' : 'hidden'
+        } fixed top-[3.5rem] left-0 w-full h-screen bg-white dark:bg-slate-950 bg-opacity-80 backdrop-blur-[0.5rem] shadow-sm`}
+      >
+        <div className="flex flex-col gap-10 items-center justify-center h-full">
+          {/* is active  link*/}
+          <Link
+            href="/"
+            onClick={closeMenu}
+            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+          >
+            Home
           </Link>
-          <Link href="/#about">
-            <span
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              onClick={closeMenu}
-            >
-              About
-            </span>
+          <Link
+            href="/#about"
+            onClick={closeMenu}
+            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+          >
+            about
           </Link>
-          <Link href="/#project">
-            <span
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              onClick={closeMenu}
-            >
-              Projects
-            </span>
+          <Link
+            href="/#projects"
+            onClick={closeMenu}
+            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+          >
+            Projects
           </Link>
-          <Link href="/#contact">
-            <span
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              onClick={closeMenu}
-            >
-              Contact
-            </span>
+          <Link
+            href="/#experience"
+            onClick={closeMenu}
+            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+          >
+            Experience
           </Link>
-
-          {/* Add more links as needed */}
+          <Link
+            href="/#contact"
+            onClick={closeMenu}
+            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </nav>
