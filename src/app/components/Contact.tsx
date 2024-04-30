@@ -11,7 +11,7 @@ const Contact = () => {
           </span>
         </h1>
         <div className="mt-4">
-          <p className="text-md text-center leading-relaxed text-slate-400">
+          <p className="text-md text-center leading-relaxed text-slate-400 lg:w-3/4 mx-auto">
             I am always open to new opportunities and collaborations. Feel free
             to reach out to me if you have any questions or just want to say hi.
           </p>

@@ -86,7 +86,11 @@ const Intro = () => {
         >
           Contact me here{' '}
         </a>
-        <a href="/CV" className="group inline transition duration-300">
+        <a
+          href="/cv_shareeb_2024.pdf"
+          target="_blank"
+          className="group inline transition duration-300"
+        >
           Download CV
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 dark:bg-white bg-black"></span>
         </a>

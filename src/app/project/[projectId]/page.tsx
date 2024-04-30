@@ -28,10 +28,10 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
         width={960}
         height={600}
         quality={100}
-        className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none"
+        className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none rounded-b-lg"
         priority={true}
       />
-      <div className="px-4 lg:px-80">
+      <div className="px-4 lg:px-96">
         <h2
           className="text-2xl font-bold text-transparent 
            -mt-8 mb-4"

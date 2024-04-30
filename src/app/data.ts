@@ -34,6 +34,15 @@ const Data: ProjectData[] = [
     githubUrl: 'https://github.com/HashmiShareeb/smartapp_project24',
     tags: ['Flutter', 'Dart', 'Firebase', 'Firestore'],
   },
+  {
+    id: '3',
+    title: 'My Portfolio',
+    description:
+      'This is my portfolio website where I showcase my projects and skills. This website is made with Next.js, Tailwind CSS, and TypeScript. I also used Framer Motion for animations and Google Fonts for the fonts. I also used the Next.js Image component to optimize the images. I also used the Next.js',
+    image: '/images/portfolio_showcase.png',
+    tags: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    githubUrl: 'https://github.com/HashmiShareeb/my_portfolio',
+  },
 
   // Add more projects following the same format
 ]
