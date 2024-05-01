@@ -2,6 +2,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import projectData, { ProjectData } from '../data'
+import { CldImage } from 'next-cloudinary'
+import Link from 'next/link'
 
 const ProjectCards = () => {
   return (
@@ -10,25 +12,36 @@ const ProjectCards = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       id="projects"
-      className="py-24 px-4 mx-auto lg:mx-0"
+      className="px-4 mx-auto lg:mx-0"
     >
-      <h1 className="text-4xl lg:text-5xl font-bold text-transparent text-center lg:text-left">
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
-          Featured Projects
-        </span>
-      </h1>
-      <div className="mt-8 flex gap-4 lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
+      <div className="mt-8 flex gap-4 flex-wrap lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
         {projectData.map((project: ProjectData) => (
-          <div className="py-2" key={project.id}>
+          <motion.div
+            className="py-2"
+            key={project.id}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: false }}
+          >
             <div>
-              <picture>
+              {/* <picture>
                 <source srcSet={project.image} type="image/webp" />
                 <img
                   src={project.image}
                   alt={project.title}
                   className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-[400px] h-96"
                 />
-              </picture>
+              </picture> */}
+              <CldImage
+                width={400}
+                height={300}
+                src={project.image}
+                alt={project.title}
+                quality={100}
+                priority={true}
+                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-[400px] h-96"
+              />
             </div>
             <div className="mt-4">
               <h2 className="text-2xl font-bold text-transparent">
@@ -44,7 +57,7 @@ const ProjectCards = () => {
                 Read more
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </motion.section>

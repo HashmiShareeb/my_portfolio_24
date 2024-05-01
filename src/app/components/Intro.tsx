@@ -4,13 +4,20 @@ import React from 'react'
 import Image from 'next/image'
 import exp from 'constants'
 import { motion } from 'framer-motion'
+import CTA from './CTA'
 
 const Intro = () => {
   return (
     <motion.section
       transition={{ delay: 0.2, duration: 0.5 }}
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      initial={{
+        opacity: 0,
+        y: 10,
+      }}
       id="#about"
       className="max-w-xl flex flex-col items-center justify-center mx-auto px-4"
     >
@@ -26,7 +33,7 @@ const Intro = () => {
           }}
           transition={{
             type: 'tween',
-            duration: 0.5,
+            duration: 0.2,
           }}
           // className="mb-8 lg:mt-10 mt-20 h-56 w-56 overflow-hidden rounded-full bg-gradient-to-tr from-teal-300 to-blue-500"
         >
@@ -38,27 +45,20 @@ const Intro = () => {
             className="rounded-full my-20 h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
             quality={95}
             priority={true}
+            objectFit="fill"
+            objectPosition="center"
           />
         </motion.div>
-        <span className="mb-4">👋 Hello there!</span>
-        <h1 className="lg:text-6xl md:text-4xl text-3xl text-nowrap font-extrabold leading-relaxed tracking-tight">
-          Shareeb Hashmi
-        </h1>
-        <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-gradient-to-r from-teal-300 to-blue-500 bg-clip-text text-transparent">
-          Web developer
-        </h2>
       </div>
-      <motion.p
-        initial={{
-          opacity: 0,
-          y: 100,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        className="mb-10 mt-4 text-md leading-relaxed text-center dark:text-slate-400 font-medium"
-      >
+
+      <span className="mb-4 font-mono">👋 Hello there!</span>
+      <h1 className="lg:text-6xl md:text-4xl text-3xl text-nowrap font-extrabold leading-relaxed tracking-tight">
+        Shareeb Hashmi
+      </h1>
+      <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-gradient-to-r from-teal-300 to-blue-500 bg-clip-text text-transparent">
+        Web developer
+      </h2>
+      <p className="mb-10 mt-4 text-md leading-relaxed text-center dark:text-slate-400 font-medium">
         I&apos;m a graduate in MIT currently studying{' '}
         <a
           href="https://mct.be/"
@@ -71,7 +71,8 @@ const Intro = () => {
         in Belgium. I have a passion for web development and love to create new
         things. I am a fast learner and always eager to something new or face
         challenges.
-      </motion.p>
+      </p>
+
       <div className="flex lg:flex-row selection  items-center justify-center gap-10">
         {/* <Link
           href="#contact"
@@ -80,6 +81,7 @@ const Intro = () => {
           <a>Contact me here 👉</a>
         </Link> */}
         {/* buttons */}
+        <CTA />
         <a
           href="#contact"
           className="rounded-md bg-teal-800 text-teal-400 px-5 py-3 font-medium transition-colors  hover:bg-teal-700 duration-300  outline-none focus:scale-110 hover:scale-110"

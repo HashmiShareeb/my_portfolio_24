@@ -6,6 +6,7 @@ import React from 'react'
 import projectData from '@/app/data'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
+import { CldImage } from 'next-cloudinary'
 
 const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
   // Find the project with the matching id
@@ -18,20 +19,20 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
   return (
     <motion.section
       transition={{ delay: 0.2, duration: 0.5 }}
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       className="min-h-screen"
     >
-      <Image
+      <CldImage
         src={project.image}
         alt={project.title}
-        width={960}
-        height={600}
-        quality={100}
+        width="1220"
+        height="600"
+        quality="95"
         className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none rounded-b-lg"
         priority={true}
       />
-      <div className="px-4 lg:px-96">
+      <div className="px-4 lg:px-64">
         <h2
           className="text-2xl font-bold text-transparent 
            -mt-8 mb-4"
