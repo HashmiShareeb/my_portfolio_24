@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
-import projectData, { ProjectData } from '../data'
+import projectData, { ProjectData } from '../interfaces/projects.interface'
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
 
@@ -14,7 +14,7 @@ const ProjectCards = () => {
       id="projects"
       className="px-4 mx-auto lg:mx-0"
     >
-      <div className="mt-8 flex gap-4 flex-wrap lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
+      <div className="mt-8 flex  flex-wrap lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
         {projectData.map((project: ProjectData) => (
           <motion.div
             className="py-2"

@@ -3,7 +3,7 @@ import { Earth, File, Github, Link2, Youtube } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import projectData from '@/app/data'
+import projectData from '@/app/interfaces/projects.interface'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { CldImage } from 'next-cloudinary'
@@ -29,7 +29,7 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
         width="1220"
         height="600"
         quality="95"
-        className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none rounded-b-lg"
+        className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none lg:rounded-b-lg"
         priority={true}
       />
       <div className="px-4 lg:px-64">

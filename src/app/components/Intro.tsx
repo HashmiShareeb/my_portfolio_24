@@ -5,6 +5,7 @@ import Image from 'next/image'
 import exp from 'constants'
 import { motion } from 'framer-motion'
 import CTA from './CTA'
+import { CldImage } from 'next-cloudinary'
 
 const Intro = () => {
   return (
@@ -33,20 +34,18 @@ const Intro = () => {
           }}
           transition={{
             type: 'tween',
-            duration: 0.2,
+            duration: 0.5,
           }}
-          // className="mb-8 lg:mt-10 mt-20 h-56 w-56 overflow-hidden rounded-full bg-gradient-to-tr from-teal-300 to-blue-500"
+          //className="mb-8 lg:mt-10 mt-20 h-56 w-56 overflow-hidden rounded-full bg-gradient-to-tr from-teal-300 to-blue-500"
         >
-          <Image
-            src=""
+          <CldImage
+            src="projects/qpggxcmd93hwgiisoakb"
             alt="Shareeb portrait"
-            width={500}
-            height={500}
+            width="500"
+            height="500"
             className="rounded-full my-20 h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
-            quality={95}
+            quality="95"
             priority={true}
-            objectFit="fill"
-            objectPosition="center"
           />
         </motion.div>
       </div>

@@ -1,11 +1,9 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
-import { CldImage } from 'next-cloudinary'
 
 function CTA() {
   return (
-    //cloudinary image
     <>
       <motion.button
         whileHover={{

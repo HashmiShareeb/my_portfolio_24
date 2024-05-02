@@ -1,15 +1,12 @@
 import { Mail } from 'lucide-react'
 import React from 'react'
+import GradientTitle from './Text/GradientHeaderText'
 
 const Contact = () => {
   return (
     <section id="contact">
       <div className="grid place-items-center m-8">
-        <h1 className="text-4xl lg:text-5xl font-bold  text-transparent">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
-            Contact me
-          </span>
-        </h1>
+        <GradientTitle title="Contact" />
         <div className="mt-4">
           <p className="text-md text-center leading-relaxed text-slate-400 lg:w-3/4 mx-auto">
             I am always open to new opportunities and collaborations. Feel free
