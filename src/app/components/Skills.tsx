@@ -4,6 +4,7 @@ import GradientTitle from './Text/GradientHeaderText'
 import { skillsData } from '../data'
 import { animate, motion } from 'framer-motion'
 import { init } from 'next/dist/compiled/webpack/webpack'
+import { tree } from 'next/dist/build/templates/app-page'
 
 //custom motion animation
 const fadeIn = {
@@ -23,9 +24,9 @@ const fadeIn = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-4 mx-auto lg:mx-0 scroll-mt-28">
-      <GradientTitle title="My Skills" />
-      <ul className="mt-8 flex gap-4 flex-wrap justify-center dark:text-slate-400">
+    <section id="skills" className="py-24 px-4 mx-auto lg:mx-0">
+      <GradientTitle title="My Skills" centerTitle={true} />
+      <ul className="lg:mt-8 mt-4 flex gap-4 flex-wrap justify-center dark:text-slate-400">
         {skillsData.map((skills, index) => (
           <motion.li
             key={index}

@@ -15,6 +15,8 @@ export const skillsData = [
   // },
 
   'React',
+  '.NET',
+  'C#',
   'Next.js',
   'TailwindCSS',
   'Vue.js',

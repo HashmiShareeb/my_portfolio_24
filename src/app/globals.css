@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+:root {
+  --scrollbar-thumb-color: teal;
+}
+
+::-webkit-scrollbar{
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 6px;
+}
+
+
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

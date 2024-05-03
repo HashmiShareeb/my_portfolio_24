@@ -23,6 +23,7 @@ const Data: ProjectData[] = [
     liveUrl: 'https://hashmishareeb.github.io/movieapp/',
     externalLink: 'https://www.themoviedb.org/',
     tags: ['HTML', 'CSS', 'JavaScript', 'TheMovieDB API'],
+    ExtraImages: ['projects/themovieapp_rbjdme'],
   },
   {
     id: '2',
@@ -39,7 +40,7 @@ const Data: ProjectData[] = [
     title: 'My Portfolio',
     description:
       'This is my portfolio website where I showcase my projects and skills. This website is made with Next.js, Tailwind CSS, and TypeScript. I also used Framer Motion for animations and Google Fonts for the fonts. I also used Cloudinary Image component to optimize the images.',
-    image: '/images/portfolio_showcase.png',
+    image: 'projects/r328bbyn9b2t59hqjszg',
     tags: [
       'Next.js',
       'Tailwind CSS',

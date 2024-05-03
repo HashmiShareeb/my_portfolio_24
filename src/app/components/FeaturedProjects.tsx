@@ -5,6 +5,7 @@ import projectData, { ProjectData } from '../interfaces/projects.interface'
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
 import GradientTitle from './Text/GradientHeaderText'
+import { ChevronRight } from 'lucide-react'
 
 const FeaturedProjects = () => {
   return (
@@ -16,13 +17,18 @@ const FeaturedProjects = () => {
       className="py-24 px-4 mx-auto lg:mx-0"
     >
       <div className="flex lg:flex-row flex-col items-center ">
-        <GradientTitle title=" Featured Projects" />
+        <GradientTitle title=" Featured Projects" centerTitle={true} />
         <Link
           href="/project"
-          className="lg:ml-auto group inline transition duration-300 text-teal-500 "
+          className="lg:ml-auto group inline transition duration-300 text-teal-500 relative"
         >
-          Show all projects
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-teal-500"></span>
+          <span className="flex items-center gap-2 group-hover:text-teal-400">
+            show all projects
+            <ChevronRight
+              size={20}
+              className="transition-transform duration-300 transform group-hover:translate-x-1"
+            />
+          </span>
         </Link>
       </div>
       <div className="mt-8 flex gap-4 flex-wrap lg:gap-10 flex-col lg:flex-row items-end lg:items-start">

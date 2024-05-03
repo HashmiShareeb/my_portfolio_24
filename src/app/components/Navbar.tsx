@@ -15,13 +15,18 @@ const Navbar: React.FC = () => {
 
   //is active
   const isActive = (id: string) => {
-    return `#${id}` === window.location.hash ? 'text-teal-500' : 'text-gray-400'
+    if (typeof window !== 'undefined') {
+      return `#${id}` === window.location.hash
+        ? 'text-teal-500'
+        : 'text-gray-400'
+    }
+    return 'text-gray-400'
   }
 
   return (
     <nav className="z-[999] relative">
       <div className="fixed top-0  h-[3.5rem] w-full bg-white dark:bg-slate-900 bg-opacity-80 backdrop-blur-[0.5rem] shadow-sm">
-        <div className="flex items-center justify-between h-full px-4">
+        <div className="flex items-center justify-between h-full lg:px-52 px-4">
           <Link href="/" className="text-lg font-bold">
             Shareeb <span className="text-teal-500 font-extrabold">Hashmi</span>
           </Link>

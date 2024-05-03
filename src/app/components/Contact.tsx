@@ -1,6 +1,7 @@
 import { Mail } from 'lucide-react'
 import React from 'react'
 import GradientTitle from './Text/GradientHeaderText'
+import CTA from './CTA'
 
 const Contact = () => {
   return (
@@ -12,16 +13,13 @@ const Contact = () => {
             I am always open to new opportunities and collaborations. Feel free
             to reach out to me if you have any questions or just want to say hi.
           </p>
-          <div className="mt-4 flex items-center justify-center gap-4">
-            <a
-              href="mailto:shareeb.hashmi@student.howest.be"
-              className="transform rounded-md  bg-teal-800 text-teal-400 px-5 py-3 font-medium transition-colors hover:bg-teal-700 transition-colors duration-200"
-            >
+          <div className="mt-8 flex items-center justify-center gap-4">
+            <CTA mailto="shareeb.hashmi@howest.student.be">
               <span className="inline-flex items-center mx-auto">
                 <Mail size={20} />
                 <span className="ml-2">Email me</span>
               </span>
-            </a>
+            </CTA>
           </div>
         </div>
       </div>

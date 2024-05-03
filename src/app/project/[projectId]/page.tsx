@@ -1,10 +1,15 @@
 'use client'
-import { Earth, File, Github, Link2, Youtube } from 'lucide-react'
-import Image from 'next/image'
+import {
+  ChevronRight,
+  Earth,
+  Folder,
+  Github,
+  Link2,
+  Youtube,
+} from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import projectData from '@/app/interfaces/projects.interface'
-import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { CldImage } from 'next-cloudinary'
 
@@ -13,7 +18,29 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
   const project = projectData.find(p => p.id === params.projectId)
 
   if (!project) {
-    return <div>Project not found</div>
+    return (
+      <div className="flex flex-col items-center justify-center h-screen">
+        <h1 className="flex items-center gap-4 text-2xl font-bold text-center">
+          <Folder size={40} />
+          project not found
+        </h1>
+        <div className="mt-4">
+          {/* link back to project page */}
+          <Link
+            href="/project"
+            className="group inline transition duration-300 text-teal-500 relative"
+          >
+            <span className="flex items-center gap-2 group-hover:text-teal-400">
+              back to projects
+              <ChevronRight
+                size={20}
+                className="transition-transform duration-300 transform group-hover:translate-x-1"
+              />
+            </span>
+          </Link>
+        </div>
+      </div>
+    )
   }
 
   return (
