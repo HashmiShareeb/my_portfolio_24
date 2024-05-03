@@ -28,4 +28,6 @@ export const skillsData = [
   'Firebase',
   'PHP',
   'Flutter',
+  'Adobe XD',
+  'Figma',
 ] as const

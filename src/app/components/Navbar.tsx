@@ -14,8 +14,8 @@ const Navbar: React.FC = () => {
   }
 
   //is active
-  const isActive = (href: string) => {
-    return window.location.pathname === href ? 'active' : ''
+  const isActive = (id: string) => {
+    return `#${id}` === window.location.hash ? 'text-teal-500' : 'text-gray-400'
   }
 
   return (
@@ -64,42 +64,42 @@ const Navbar: React.FC = () => {
       <div
         className={`${
           isOpen ? 'block' : 'hidden'
-        } fixed top-[3.5rem] left-0 w-full h-screen bg-white dark:bg-slate-950 bg-opacity-80 backdrop-blur-[0.5rem] shadow-sm`}
+        } fixed top-[3.5rem] left-0 w-full h-screen bg-white dark:bg-slate-950 bg-opacity-80  backdrop-blur-[0.5rem] dark:bg-opacity-80 dark:backdrop-blur-[0.5rem] shadow-sm dark:shadow-none`}
       >
         <div className="flex flex-col gap-10 items-center justify-center h-full">
           {/* is active  link*/}
-          <Link
+          {/* <Link
             href="/"
             onClick={closeMenu}
-            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-500 transition-colors duration-200 ${isActive('')}`}
           >
             Home
-          </Link>
+          </Link> */}
           <Link
             href="/#about"
             onClick={closeMenu}
-            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-500 transition-colors duration-200 ${isActive('about')}`}
           >
             about
           </Link>
           <Link
             href="/#projects"
             onClick={closeMenu}
-            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-500 transition-colors duration-200 ${isActive('projects')}`}
           >
             Projects
           </Link>
           <Link
-            href="/#experience"
+            href="/#skills"
             onClick={closeMenu}
-            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-500 transition-colors duration-200 ${isActive('skills')}`}
           >
-            Experience
+            My Skills
           </Link>
           <Link
             href="/#contact"
             onClick={closeMenu}
-            className="lg:text-6xl text-4xl font-bold  uppercase hover:text-teal-500 transition-colors duration-300"
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-500 transition-colors duration-200 ${isActive('contact')}`}
           >
             Contact
           </Link>
