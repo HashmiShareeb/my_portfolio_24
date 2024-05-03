@@ -40,7 +40,7 @@ const Data: ProjectData[] = [
     title: 'My Portfolio',
     description:
       'This is my portfolio website where I showcase my projects and skills. This website is made with Next.js, Tailwind CSS, and TypeScript. I also used Framer Motion for animations and Google Fonts for the fonts. I also used Cloudinary Image component to optimize the images.',
-    image: 'projects/r328bbyn9b2t59hqjszg',
+    image: 'projects/aw6t5upukymx6fsdcwpx',
     tags: [
       'Next.js',
       'Tailwind CSS',
