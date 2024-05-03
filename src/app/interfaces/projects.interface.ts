@@ -31,7 +31,7 @@ const Data: ProjectData[] = [
     description:
       'For this project, I made a timetable app that shows the timetable of the school. This app is made with Flutter, using the calender_view package to display the timetable. I also used firebase for te user authentication and firebase as the datbase to store the added event each user can add. This was a project I had to make in the class called Mobile Development, where we use Flutter and Dart to make a mobile app.',
     image: 'projects/ifzri2p4xyvtvhmqdczf',
-    videoUrl: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+    videoUrl: 'https://drive.google.com/file/d/1X1Y6rSPLK4fZPHOgxgoZLFMUVkJNk4iM/view?usp=sharing',
     githubUrl: 'https://github.com/HashmiShareeb/smartapp_project24',
     tags: ['Flutter', 'Dart', 'Firebase', 'Firestore'],
   },
