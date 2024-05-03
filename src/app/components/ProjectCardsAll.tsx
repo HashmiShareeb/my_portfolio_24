@@ -12,7 +12,7 @@ const ProjectCards = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       id="projects"
-      className="px-4 mx-auto lg:mx-0"
+      className="px-4 mx-auto lg:py-24 py-4"
     >
       <div className="mt-8 flex  flex-wrap lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
         {projectData.map((project: ProjectData) => (
@@ -25,14 +25,6 @@ const ProjectCards = () => {
             viewport={{ once: false }}
           >
             <div>
-              {/* <picture>
-                <source srcSet={project.image} type="image/webp" />
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-[400px] h-96"
-                />
-              </picture> */}
               <CldImage
                 width={400}
                 height={300}
@@ -49,7 +41,7 @@ const ProjectCards = () => {
                   {project.title}
                 </span>
               </h2>
-              {/* <p className="text-slate-400">{project.description}</p> */}
+
               <a
                 href={'/project/' + project.id}
                 className="text-teal-500 hover:underline hover:text-teal-400 transition-colors"

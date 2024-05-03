@@ -72,14 +72,13 @@ const Navbar: React.FC = () => {
         } fixed top-[3.5rem] left-0 w-full h-screen bg-white dark:bg-slate-950 bg-opacity-80  backdrop-blur-[0.5rem] dark:bg-opacity-80 dark:backdrop-blur-[0.5rem] shadow-sm dark:shadow-none`}
       >
         <div className="flex flex-col gap-10 items-center justify-center h-full">
-          {/* is active  link*/}
-          {/* <Link
-            href="/"
+          <Link
+            href="/#home"
             onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-500 transition-colors duration-200 ${isActive('')}`}
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-500 transition-colors duration-200 ${isActive('home')}`}
           >
             Home
-          </Link> */}
+          </Link>
           <Link
             href="/#about"
             onClick={closeMenu}

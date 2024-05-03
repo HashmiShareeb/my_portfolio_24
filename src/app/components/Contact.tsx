@@ -2,12 +2,18 @@ import { Mail } from 'lucide-react'
 import React from 'react'
 import GradientTitle from './Text/GradientHeaderText'
 import CTA from './CTA'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
   return (
-    <section id="contact">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="px-4 mx-auto py-4 lg:py-24"
+      id="contact"
+    >
       <div className="grid place-items-center m-8">
-        <GradientTitle title="Contact" />
+        <GradientTitle title="Contact" IsCentered={true} />
         <div className="mt-4">
           <p className="text-md text-center leading-relaxed text-slate-400 lg:w-3/4 mx-auto">
             I am always open to new opportunities and collaborations. Feel free
@@ -23,7 +29,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

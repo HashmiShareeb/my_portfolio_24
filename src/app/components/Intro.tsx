@@ -16,7 +16,7 @@ const Intro = () => {
         opacity: 0,
         y: 10,
       }}
-      id="#about"
+      id="#home"
       className="max-w-xl flex flex-col items-center justify-center mx-auto px-4"
     >
       <div className="flex flex-col items-center justify-center">
@@ -33,13 +33,12 @@ const Intro = () => {
             type: 'tween',
             duration: 0.5,
           }}
-          //className="mb-8 lg:mt-10 mt-20 h-56 w-56 overflow-hidden rounded-full bg-gradient-to-tr from-teal-300 to-blue-500"
         >
           <CldImage
             src="projects/qpggxcmd93hwgiisoakb"
             alt="Shareeb portrait"
-            width="500"
-            height="500"
+            width="400"
+            height="400"
             className="rounded-full my-20 h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
             quality="95"
             priority={true}

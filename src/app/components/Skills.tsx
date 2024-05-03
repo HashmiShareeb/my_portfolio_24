@@ -25,7 +25,7 @@ const fadeIn = {
 const Skills = () => {
   return (
     <section id="skills" className="py-24 px-4 mx-auto lg:mx-0">
-      <GradientTitle title="My Skills" centerTitle={true} />
+      <GradientTitle title="My Skills" IsCentered={true} />
       <ul className="lg:mt-8 mt-4 flex gap-4 flex-wrap justify-center dark:text-slate-400">
         {skillsData.map((skills, index) => (
           <motion.li
