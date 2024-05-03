@@ -1,4 +1,4 @@
-import { Folder } from 'lucide-react'
+"use client";
 import ProjectCards from '../components/ProjectCardsAll'
 import GradientTitle from '../components/Text/GradientHeaderText'
 

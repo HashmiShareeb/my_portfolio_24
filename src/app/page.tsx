@@ -1,3 +1,4 @@
+"use client";
 import Contact from './components/Contact'
 import Intro from './components/Intro'
 import FeaturedProjects from './components/FeaturedProjects'
