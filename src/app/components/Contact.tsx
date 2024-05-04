@@ -23,7 +23,7 @@ const Contact = () => {
             <CTA mailto="shareeb.hashmi@howest.student.be">
               <span className="inline-flex items-center mx-auto">
                 <Mail size={32} />
-                <span className="ml-2">Email me</span>
+                <span className="ml-2 hidden lg:block">Email me</span>
               </span>
             </CTA>
             <CTA
