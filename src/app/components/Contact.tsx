@@ -1,4 +1,4 @@
-import { Mail } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import React from 'react'
 import GradientTitle from './Text/GradientHeaderText'
 import CTA from './CTA'
@@ -22,9 +22,18 @@ const Contact = () => {
           <div className="mt-8 flex items-center justify-center gap-4">
             <CTA mailto="shareeb.hashmi@howest.student.be">
               <span className="inline-flex items-center mx-auto">
-                <Mail size={20} />
+                <Mail size={32} />
                 <span className="ml-2">Email me</span>
               </span>
+            </CTA>
+            <CTA
+              href="https://www.linkedin.com/in/shareeb-hashmi-569b38161/"
+              target="_blank"
+            >
+              <Linkedin size={32} />
+            </CTA>
+            <CTA href="https://github.com/HashmiShareeb" target="_blank">
+              <Github size={32} />
             </CTA>
           </div>
         </div>

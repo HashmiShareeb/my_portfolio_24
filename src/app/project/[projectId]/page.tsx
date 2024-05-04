@@ -6,12 +6,14 @@ import {
   Github,
   Link2,
   Youtube,
+  File,
 } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import projectData from '@/app/interfaces/projects.interface'
 import { motion } from 'framer-motion'
 import { CldImage } from 'next-cloudinary'
+import CTA from '@/app/components/CTA'
 
 const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
   // Find the project with the matching id
@@ -69,9 +71,12 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
           </span>
         </h2>
         {/* tags */}
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap lg:gap-4 gap-2">
           {project.tags.map(tag => (
-            <span key={tag} className="py-1 font-mono mb-4 dark:text-slate-400">
+            <span
+              key={tag}
+              className="py-1 font-mono lg:text-[1rem] text-[0.9rem] mb-4 dark:text-slate-400"
+            >
               {tag}
             </span>
           ))}
@@ -81,44 +86,35 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
         </p>
         <div className="mx-1 m-6 flex items-center gap-4">
           {project.githubUrl && (
-            <Link
-              href={project.githubUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="hover:scale-105 transition-all duration-200 ease-in-out hover:text-teal-500 bg-teal-800 p-3 text-teal-600 rounded-md hover:underline hover:text-teal-400 transition-colors"
-            >
+            <CTA href={project.githubUrl} target="_blank">
               <Github size={32} />
-            </Link>
+            </CTA>
           )}
           {project.liveUrl && (
-            <Link
-              href={project.liveUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="hover:scale-105 transition-all duration-200 ease-in-out hover:text-teal-500 bg-teal-800 p-3 text-teal-600 rounded-md hover:underline hover:text-teal-400 transition-colors"
-            >
+            <CTA href={project.liveUrl} target="_blank">
               <Earth size={32} />
-            </Link>
+            </CTA>
           )}
           {project.externalLink && (
-            <Link
-              href={project.externalLink}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="hover:scale-105 transition-all duration-200 ease-in-out hover:text-teal-500 bg-teal-800 p-3 text-teal-600 rounded-md hover:underline hover:text-teal-400 transition-colors"
-            >
+            <CTA href={project.externalLink} target="_blank">
               <Link2 size={32} />
-            </Link>
+            </CTA>
           )}
           {project.videoUrl && (
-            <Link
-              href={project.videoUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="hover:scale-105 transition-all duration-200 ease-in-out hover:text-teal-500 bg-teal-800 p-3 text-teal-600 rounded-md hover:underline hover:text-teal-400 transition-colors"
-            >
+            <CTA href={project.videoUrl} target="_blank">
               <Youtube size={32} />
-            </Link>
+            </CTA>
+          )}
+          {/* folder */}
+          {project.folderUrl && (
+            <CTA href={project.folderUrl} target="_blank">
+              <Folder size={32} />
+            </CTA>
+          )}
+          {project.otherFile && (
+            <CTA href={project.otherFile} target="_blank">
+              <File size={32} />
+            </CTA>
           )}
         </div>
       </div>

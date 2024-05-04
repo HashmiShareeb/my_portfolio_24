@@ -41,7 +41,7 @@ function CTA({
           href={href || '#'}
           target={target || '_self'}
           download={download || false}
-          className="rounded-md bg-teal-800 text-teal-400 px-5 py-3 font-medium transition-colors hover:bg-teal-700 duration-300 outline-none flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+          className="rounded-md bg-teal-800 text-teal-400 p-3 font-medium transition-colors hover:bg-teal-700 duration-300 outline-none flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900"
         >
           {children}
         </Link>
