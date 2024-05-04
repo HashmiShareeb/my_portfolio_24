@@ -71,11 +71,11 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
           </span>
         </h2>
         {/* tags */}
-        <div className="flex flex-wrap lg:gap-4 gap-2">
+        <div className="flex flex-wrap gap-4 items-center">
           {project.tags.map(tag => (
             <span
               key={tag}
-              className="py-1 font-mono lg:text-[1rem] text-[0.9rem] mb-4 dark:text-slate-400"
+              className="py-1 font-mono lg:text-lg md:text-[1.2rem] text-[1rem] mb-4 dark:text-slate-400"
             >
               {tag}
             </span>
