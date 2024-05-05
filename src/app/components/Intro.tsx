@@ -58,7 +58,7 @@ const Intro = () => {
         <a
           href="https://mct.be/"
           target="_blank"
-          className="text-teal-400 hover:underline hover:text-teal-300 transition-colors duration-100
+          className="text-teal-400 underline hover:text-teal-300 transition-colors duration-100
          "
         >
           MCT-Next Web Developer in Howest{' '}
