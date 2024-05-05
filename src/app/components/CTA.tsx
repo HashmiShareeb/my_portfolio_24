@@ -4,23 +4,26 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 function CTA({
+  id,
   href,
   target,
   download,
   mailto,
+  ariaLabel,
   children,
 }: {
+  id?: string
   href?: string
   target?: string
   download?: boolean
   mailto?: string
+  ariaLabel?: string
   children: React.ReactNode
 }) {
   const handleClick = () => {
     if (mailto) {
       window.location.href = `mailto:${mailto}`
     }
-    // Add other conditions for different behaviors, like navigating to pages or sections
   }
 
   return (
@@ -38,10 +41,12 @@ function CTA({
         }}
       >
         <Link
+          id={id || ''}
+          aria-label={ariaLabel || ''}
           href={href || '#'}
           target={target || '_self'}
           download={download || false}
-          className="rounded-md bg-teal-800 text-teal-400 p-3 font-medium transition-colors hover:bg-teal-700 duration-300 outline-none flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+          className="rounded-md bg-teal-900 text-teal-400 p-3 font-medium transition-colors hover:bg-teal-700 duration-300 outline-none flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900"
         >
           {children}
         </Link>

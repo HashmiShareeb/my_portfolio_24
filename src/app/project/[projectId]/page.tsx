@@ -30,9 +30,9 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
           {/* link back to project page */}
           <Link
             href="/project"
-            className="group inline transition duration-300 text-teal-500 relative"
+            className="group inline transition duration-300 text-teal-400 relative"
           >
-            <span className="flex items-center gap-2 group-hover:text-teal-400">
+            <span className="flex items-center gap-2 group-hover:text-teal-300">
               back to projects
               <ChevronRight
                 size={20}
@@ -86,33 +86,63 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
         </p>
         <div className="mx-1 m-6 flex items-center gap-4">
           {project.githubUrl && (
-            <CTA href={project.githubUrl} target="_blank">
+            <CTA
+              href={project.githubUrl}
+              target="_blank"
+              id="github-cta"
+              ariaLabel="GitHub"
+            >
               <Github size={32} />
             </CTA>
           )}
           {project.liveUrl && (
-            <CTA href={project.liveUrl} target="_blank">
+            <CTA
+              href={project.liveUrl}
+              target="_blank"
+              id="live-url-cta"
+              ariaLabel="LiveUrl"
+            >
               <Earth size={32} />
             </CTA>
           )}
           {project.externalLink && (
-            <CTA href={project.externalLink} target="_blank">
+            <CTA
+              href={project.externalLink}
+              target="_blank"
+              id="external-link-cta"
+              ariaLabel="ExternalLink"
+            >
               <Link2 size={32} />
             </CTA>
           )}
           {project.videoUrl && (
-            <CTA href={project.videoUrl} target="_blank">
+            <CTA
+              href={project.videoUrl}
+              target="_blank"
+              id="video-url-cta"
+              ariaLabel="VideoUrl"
+            >
               <Youtube size={32} />
             </CTA>
           )}
           {/* folder */}
           {project.folderUrl && (
-            <CTA href={project.folderUrl} target="_blank">
+            <CTA
+              href={project.folderUrl}
+              target="_blank"
+              id="folder-url-cta"
+              ariaLabel="FolderURL"
+            >
               <Folder size={32} />
             </CTA>
           )}
           {project.otherFile && (
-            <CTA href={project.otherFile} target="_blank">
+            <CTA
+              href={project.otherFile}
+              target="_blank"
+              id="other-file-cta"
+              ariaLabel="OtherFiles"
+            >
               <File size={32} />
             </CTA>
           )}

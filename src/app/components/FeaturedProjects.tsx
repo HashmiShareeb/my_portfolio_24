@@ -21,9 +21,9 @@ const FeaturedProjects = () => {
         <GradientTitle title="featured projects" IsCentered={false} />
         <Link
           href="/project"
-          className="lg:ml-auto group inline transition duration-300 text-teal-500 relative"
+          className="lg:ml-auto group inline transition duration-300 text-teal-400 relative"
         >
-          <span className="flex items-center gap-2 group-hover:text-teal-400">
+          <span className="flex items-center gap-2 group-hover:text-teal-300">
             show all projects
             <ChevronRight
               size={20}
@@ -61,7 +61,7 @@ const FeaturedProjects = () => {
               </h2>
               <a
                 href={'/project/' + project.id}
-                className="text-teal-500 hover:underline hover:text-teal-400 transition-colors"
+                className="text-teal-400 hover:underline hover:text-teal-300 transition-colors"
               >
                 Read more
               </a>

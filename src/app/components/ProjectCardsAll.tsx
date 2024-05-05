@@ -44,7 +44,7 @@ const ProjectCards = () => {
 
               <a
                 href={'/project/' + project.id}
-                className="text-teal-500 hover:underline hover:text-teal-400 transition-colors"
+                className="text-teal-400 hover:underline hover:text-teal-300 transition-colors"
               >
                 Read more
               </a>

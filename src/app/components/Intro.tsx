@@ -58,7 +58,7 @@ const Intro = () => {
         <a
           href="https://mct.be/"
           target="_blank"
-          className="text-teal-500 hover:underline hover:text-teal-400 transition-colors duration-100
+          className="text-teal-400 hover:underline hover:text-teal-300 transition-colors duration-100
          "
         >
           MCT-Next Web Developer in Howest{' '}
@@ -69,7 +69,7 @@ const Intro = () => {
       </p>
 
       <div className="flex lg:flex-row selection  items-center justify-center gap-10">
-        <CTA href="/#contact">
+        <CTA href="/#contact" id="contact-cta" ariaLabel="ContactButton">
           <span>Contact me here</span>
         </CTA>
 

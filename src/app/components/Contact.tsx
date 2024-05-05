@@ -20,7 +20,11 @@ const Contact = () => {
             to reach out to me if you have any questions or just want to say hi.
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
-            <CTA mailto="shareeb.hashmi@howest.student.be">
+            <CTA
+              mailto="shareeb.hashmi@howest.student.be"
+              id="mail-cta"
+              ariaLabel="Email me"
+            >
               <span className="inline-flex items-center mx-auto">
                 <Mail size={32} />
                 <span className="ml-2 hidden lg:block">Email me</span>
@@ -29,10 +33,17 @@ const Contact = () => {
             <CTA
               href="https://www.linkedin.com/in/shareeb-hashmi-569b38161/"
               target="_blank"
+              id="linkedin-cta"
+              ariaLabel="LinkedIn"
             >
               <Linkedin size={32} />
             </CTA>
-            <CTA href="https://github.com/HashmiShareeb" target="_blank">
+            <CTA
+              href="https://github.com/HashmiShareeb"
+              target="_blank"
+              id="github-cta"
+              ariaLabel="GitHub"
+            >
               <Github size={32} />
             </CTA>
           </div>
