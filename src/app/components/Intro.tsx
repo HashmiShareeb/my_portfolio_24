@@ -74,7 +74,7 @@ const Intro = () => {
         </CTA>
 
         <a
-          href="/cv_shareeb_2024.pdf"
+          href="/cv_shareeb_2024_updated.pdf"
           target="_blank"
           className="group inline transition duration-300"
         >
