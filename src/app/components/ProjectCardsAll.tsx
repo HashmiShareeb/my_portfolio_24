@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import projectData, { ProjectData } from '../interfaces/projects.interface'
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
+import { ChevronRight } from 'lucide-react'
 
 const ProjectCards = () => {
   return (
@@ -41,13 +42,17 @@ const ProjectCards = () => {
                   {project.title}
                 </span>
               </h2>
-
-              <a
-                href={'/project/' + project.id}
-                className="text-teal-400 hover:underline hover:text-teal-300 transition-colors"
-              >
-                Read more
-              </a>
+              <Link href={'/project/' + project.id}>
+                <button className="group inline transition duration-300 text-teal-400 relative">
+                  <span className="flex items-center gap-2 group-hover:text-teal-300 group-focus:text-teal-300 mt-2">
+                    View Project
+                    <ChevronRight
+                      size={20}
+                      className="transition-transform duration-300 transform group-hover:translate-x-1"
+                    />
+                  </span>
+                </button>
+              </Link>
             </div>
           </motion.div>
         ))}
