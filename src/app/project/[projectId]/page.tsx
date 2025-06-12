@@ -7,6 +7,7 @@ import {
   Link2,
   Youtube,
   File,
+  ChevronLeft,
 } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -51,32 +52,48 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
       transition={{ delay: 0.2, duration: 0.5 }}
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
-      className="min-h-screen"
+      className="min-h-screen flex flex-col my-10"
     >
+      {/* Fixed back button that stays visible on all screens, but position adapts */}
+      <div className="fixed top-2 left-2 z-10 ">
+        {/* On md and up, center at top; on mobile, top left */}
+        <Link href="/project" passHref legacyBehavior>
+          <button className="group flex items-center gap-1 text-teal-400 hover:text-teal-300 transition-colors bg-gray-800/80 dark:bg-slate-900/80 backdrop-blur-sm px-3 py-2 rounded-full mt-4 ">
+            <ChevronLeft
+              size={20}
+              className="transition-transform duration-300 transform group-hover:-translate-x-1 group-hover:text-teal-300 group-focus:text-teal-300"
+            />
+            <span className="sr-only md:not-sr-only group-hover:text-teal-300 group-focus:text-teal-300">
+              Projects
+            </span>
+          </button>
+        </Link>
+      </div>
+
       <CldImage
         src={project.image}
         alt={project.title}
-        width="1220"
+        width="1400"
         height="600"
         quality="95"
-        className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none lg:rounded-b-lg"
+        className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none lg:rounded-xl "
         priority={true}
       />
       <div className="px-4 lg:px-64">
         <h2
           className="text-2xl font-bold text-transparent 
-           -mt-8 mb-4"
+       -mt-8 mb-4"
         >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
             {project.title}
           </span>
         </h2>
         {/* tags */}
-        <div className="flex flex-wrap gap-4 items-center">
+        <div className="flex flex-wrap gap-2 mb-6">
           {project.tags.map(tag => (
             <span
               key={tag}
-              className="py-1 font-mono lg:text-lg md:text-[1.2rem] text-[1rem] mb-4 dark:text-slate-400"
+              className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full"
             >
               {tag}
             </span>

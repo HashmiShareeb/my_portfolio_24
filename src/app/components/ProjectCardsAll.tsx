@@ -15,9 +15,9 @@ const ProjectCards = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       id="projects"
-      className="px-4 mx-auto lg:py-24 py-4"
+      className="mx-auto lg:py-10 py-4"
     >
-      <div className="mt-8 flex  flex-wrap lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {Data.map((project: ProjectData) => (
           <motion.div
             className="py-2"
@@ -27,15 +27,15 @@ const ProjectCards = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: false }}
           >
-            <div>
+            <div className="w-full ">
               <CldImage
-                width={400}
-                height={300}
+                width={800}
+                height={600}
                 src={project.image}
                 alt={project.title}
                 quality={100}
                 priority={true}
-                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-[400px] h-96"
+                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-full h-full"
               />
             </div>
             <div className="mt-4">
