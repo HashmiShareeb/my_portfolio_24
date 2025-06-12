@@ -37,7 +37,7 @@ const Skills = () => {
             custom={index}
             viewport={{ once: true }}
             className="dark:bg-teal-900 dark:text-teal-400 shadow dark:shadow-none
-            px-4 py-2 rounded-md text-sm font-semibold bg-white  dark:hover:bg-teal-700 dark:hover:text-teal-300 hover:bg-teal-200 hover:text-teal-900 transition-colors duration-300 ease-in-out"
+            px-4 py-2 rounded-md text-sm font-semibold bg-teal-200  dark:hover:bg-teal-700 dark:hover:text-teal-300 hover:bg-teal-300 hover:text-teal-900 transition-colors duration-300 ease-in-out"
           >
             {skills}
           </motion.li>

@@ -14,7 +14,7 @@ const GradientHeaderText = (props: GradientHeaderTextProps) => {
       <h1
         className={`capitalize text-4xl lg:text-5xl font-bold text-transparent ${props.IsCentered ? 'text-center' : 'lg:text-left'}`}
       >
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
           {props.title}
         </span>
       </h1>

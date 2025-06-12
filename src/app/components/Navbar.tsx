@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
           </Link>
           <button
             onClick={toggleMenu}
-            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-teal-300 hover:dark:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
+            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-teal-400 hover:dark:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
             aria-label="Toggle menu"
           >
             <svg

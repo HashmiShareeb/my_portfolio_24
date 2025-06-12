@@ -54,16 +54,21 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
       animate={{ opacity: 1, y: 0 }}
       className="min-h-screen flex flex-col my-10"
     >
-      {/* Fixed back button that stays visible on all screens, but position adapts */}
-      <div className="fixed top-2 left-2 z-10 ">
-        {/* On md and up, center at top; on mobile, top left */}
+      {/* Fixed back button: always top, spaced, with breathing room, supports dark/light */}
+      <div className="fixed top-4 left-4 z-20">
         <Link href="/project" passHref legacyBehavior>
-          <button className="group flex items-center gap-1 text-teal-400 hover:text-teal-300 transition-colors bg-gray-800/80 dark:bg-slate-900/80 backdrop-blur-sm px-3 py-2 rounded-full mt-4 ">
+          <button
+            className="group flex items-center gap-2 text-teal-500 hover:text-teal-400 transition-colors
+         px-4 py-2 rounded-full
+          
+          space-x-2"
+            style={{ minWidth: 44, minHeight: 44 }}
+          >
             <ChevronLeft
-              size={20}
-              className="transition-transform duration-300 transform group-hover:-translate-x-1 group-hover:text-teal-300 group-focus:text-teal-300"
+              size={22}
+              className="transition-transform duration-300 transform group-hover:-translate-x-1 group-hover:text-teal-400 group-focus:text-teal-400"
             />
-            <span className="sr-only md:not-sr-only group-hover:text-teal-300 group-focus:text-teal-300">
+            <span className="sr-only md:not-sr-only group-hover:text-teal-400 group-focus:text-teal-400">
               Projects
             </span>
           </button>
@@ -79,12 +84,12 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
         className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none lg:rounded-xl "
         priority={true}
       />
-      <div className="px-4 lg:px-64">
+      <div className="px-4 md:px-32 lg:px-64">
         <h2
           className="text-2xl font-bold text-transparent 
        -mt-8 mb-4"
         >
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-blue-500">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
             {project.title}
           </span>
         </h2>

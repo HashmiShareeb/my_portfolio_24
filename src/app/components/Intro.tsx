@@ -50,7 +50,7 @@ const Intro = () => {
       <h1 className="lg:text-6xl md:text-4xl text-3xl text-nowrap font-extrabold leading-relaxed tracking-tight">
         Shareeb Hashmi
       </h1>
-      <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-gradient-to-r from-teal-300 to-blue-500 bg-clip-text text-transparent">
+      <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
         Fullstack Developer
       </h2>
       <p className="mb-10 mt-4 text-md leading-relaxed text-center dark:text-slate-400 font-medium">
