@@ -18,4 +18,8 @@ export const skillsData = [
   'Flutter',
   'Adobe XD',
   'Figma',
+  'Svelte',
+  'Spring Boot',
+  'Java',
+  'Golang',
 ] as const

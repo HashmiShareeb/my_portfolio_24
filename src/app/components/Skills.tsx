@@ -1,10 +1,11 @@
 'use client'
 import React from 'react'
 import GradientTitle from './Text/GradientHeaderText'
-import { skillsData } from '../data'
+
 import { animate, motion } from 'framer-motion'
 import { init } from 'next/dist/compiled/webpack/webpack'
 import { tree } from 'next/dist/build/templates/app-page'
+import { skillsData } from '../data/languagesandskillsdata'
 
 //custom motion animation
 const fadeIn = {

@@ -17,7 +17,7 @@ const Intro = () => {
         y: 10,
       }}
       id="#home"
-      className="max-w-xl flex flex-col items-center justify-center mx-auto px-4"
+      className="min-h-screen flex flex-col items-center justify-center max-w-xl mx-auto px-4"
     >
       <div className="flex flex-col items-center justify-center">
         <motion.div
@@ -39,7 +39,7 @@ const Intro = () => {
             alt="Shareeb portrait"
             width="400"
             height="400"
-            className="rounded-full my-20 h-60 w-60 overflow-hidden bg-gradient-to-tr from-teal-300 to-blue-500 object-cover shadow-lg dark:shadow-none"
+            className="rounded-full my-20 h-60 w-60 overflow-hidden object-cover shadow-lg dark:shadow-none"
             quality="95"
             priority={true}
           />
@@ -51,7 +51,7 @@ const Intro = () => {
         Shareeb Hashmi
       </h1>
       <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-gradient-to-r from-teal-300 to-blue-500 bg-clip-text text-transparent">
-        Web developer
+        Fullstack Developer
       </h2>
       <p className="mb-10 mt-4 text-md leading-relaxed text-center dark:text-slate-400 font-medium">
         I&apos;m a graduate in MIT currently studying{' '}
@@ -61,11 +61,11 @@ const Intro = () => {
           className="text-teal-400 underline hover:text-teal-300 transition-colors duration-100
          "
         >
-          MCT-Next Web Developer in Howest{' '}
+          MCT-Next Fullstack Developer in Howest{' '}
         </a>
         in Belgium. I have a passion for web development and love to create new
-        things. I am a fast learner and always eager to something new or face
-        challenges.
+        things. I am a fast learner and always eager to learn something new and
+        face challenges!
       </p>
 
       <div className="flex lg:flex-row selection  items-center justify-center gap-10">

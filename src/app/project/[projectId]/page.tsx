@@ -10,14 +10,15 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-import projectData from '@/app/interfaces/projects.interface'
+
 import { motion } from 'framer-motion'
 import { CldImage } from 'next-cloudinary'
 import CTA from '@/app/components/CTA'
+import Data from '@/app/data/projects'
 
 const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
   // Find the project with the matching id
-  const project = projectData.find(p => p.id === params.projectId)
+  const project = Data.find(p => p.id === params.projectId)
 
   if (!project) {
     return (

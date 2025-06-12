@@ -9,8 +9,8 @@ export default function Home() {
     <main className="flex flex-col lg:px-52 px-4 ">
       {/* hero (intro) */}
       <Intro />
-      {/* about me */}
-      <About />
+      {/* about me
+      <About /> */}
       {/* projects */}
       <FeaturedProjects />
       {/* skills */}
