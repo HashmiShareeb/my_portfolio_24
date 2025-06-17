@@ -14,4 +14,10 @@ export interface ProjectData {
   date?: string //sort by date
   featured?: boolean
   createdAt?: string
+
+  sections?: {
+    title?: string
+    image?: string
+    text?: string
+  }[]
 }

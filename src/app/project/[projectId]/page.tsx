@@ -118,9 +118,10 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
             {section.image && (
               <CldImage
                 src={section.image}
+                width={800}
+                height={450}
+                quality={95}
                 alt={section.title ?? `Section image ${index + 1}`}
-                width={1200}
-                height={600}
                 className="rounded-lg shadow-md"
               />
             )}

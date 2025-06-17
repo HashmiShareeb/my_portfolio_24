@@ -13,7 +13,14 @@ const Data: ProjectData[] = [
     otherFile: '/technical_components.pdf',
     externalLink: 'https://www.delaware.pro/en-be',
     featured: true,
-    // gallery: ['projects/digitalpatienttwin'],
+    sections: [
+      {
+        title: 'Project Presentation',
+        image: 'projects/digitalpatienttwin',
+        text: 'Me and my team had the honour to present this project at the Delaware HQ in Ghent, where we showcased the Digital Patient Twin to a large audience. The project was well-received, and we received positive feedback for our work.',
+      },
+    ],
+    // gallery: ,
   },
   {
     id: '2',
@@ -69,7 +76,16 @@ const Data: ProjectData[] = [
     title: 'Harmony Energy',
     description:
       "During my internship at Harmony Energy, I contributed to both their marketing website and their internal dashboard. I recreated the entire website using modern technologies such as Svelte, TypeScript, and Tailwind CSS, and implemented i18n using Svelte Stores for locale and language management. On the internal 'My Harmony Dashboard', I worked on multiple core features including the dynamic device management page, onboarding flow (with GoLang autodetection script), energy forecasting charts, and a logging component. I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements.",
-    image: 'projects/Harmony_Energy_ooomjf',
+    image: 'Harmony_Energy_1_idesuy',
+
+    sections: [
+      {
+        title: 'Marketing Website',
+        image:
+          '2025-06-10_13.40.53_harmony.energy_24c07fcd9430_hyueuo',
+      },
+    ],
+
     tags: [
       'Svelte',
       'TypeScript',
@@ -82,11 +98,13 @@ const Data: ProjectData[] = [
       'SQL',
       'API Integration',
     ],
-    // gallery: ['projects/Harmony_Energy_ooomjf'],
-    folderUrl: '/Harmony Brochure.pdf',
+
+    otherFile: '/Harmony Brochure.pdf',
     liveUrl: 'https://harmony.energy',
     featured: true,
+    // gallery: ['projects/Harmony_Energy_ooomjf'],
   },
+
   // {
   //   id: '7',
   //   title: 'Blitxz – Robottaxi Dashboard',
