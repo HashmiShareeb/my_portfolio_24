@@ -51,7 +51,7 @@ const Intro = () => {
         Shareeb Hashmi
       </h1>
       <h2 className="mt-4 text-2xl lg:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
-        Fullstack Developer
+        Junior Full-stack Developer
       </h2>
       <p className="mb-10 mt-4 text-md leading-relaxed text-center dark:text-slate-400 font-medium">
         I&apos;m a graduate in MIT currently studying{' '}
@@ -61,7 +61,7 @@ const Intro = () => {
           className="text-teal-400 underline hover:text-teal-300 transition-colors duration-100
          "
         >
-          MCT-Next Fullstack Developer in Howest{' '}
+          MCT Next Web Developer in Howest{' '}
         </a>
         in Belgium. I have a passion for web development and love to create new
         things. I am a fast learner and always eager to learn something new and
@@ -74,8 +74,10 @@ const Intro = () => {
         </CTA>
 
         <a
-          href="/cv_shareeb_2024_09.pdf"
+          href="/cv_shareeb_2025_1.pdf"
           target="_blank"
+          rel="noopener noreferrer"
+          download
           className="group inline transition duration-300"
         >
           Download CV

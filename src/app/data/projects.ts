@@ -13,6 +13,7 @@ const Data: ProjectData[] = [
     otherFile: '/technical_components.pdf',
     externalLink: 'https://www.delaware.pro/en-be',
     featured: true,
+    // gallery: ['projects/digitalpatienttwin'],
   },
   {
     id: '2',
@@ -67,12 +68,46 @@ const Data: ProjectData[] = [
     id: '6',
     title: 'Harmony Energy',
     description:
-      'During my intership at Harmony Energy, My first tasks was to recreate their website in a modern way. I used Svelte, TypeScript and Tailwind CSS to make the website, and also used Svelte Stores to manage the locales and the language of the website. ',
+      "During my internship at Harmony Energy, I contributed to both their marketing website and their internal dashboard. I recreated the entire website using modern technologies such as Svelte, TypeScript, and Tailwind CSS, and implemented i18n using Svelte Stores for locale and language management. On the internal 'My Harmony Dashboard', I worked on multiple core features including the dynamic device management page, onboarding flow (with GoLang autodetection script), energy forecasting charts, and a logging component. I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements.",
     image: 'projects/Harmony_Energy_ooomjf',
-    tags: ['Svelte', 'TypeScript', 'Tailwind CSS', 'Svelte Stores', 'I18n'],
+    tags: [
+      'Svelte',
+      'TypeScript',
+      'Tailwind CSS',
+      'Svelte Stores',
+      'I18n',
+      'Golang',
+      'Grafana',
+      'Docker',
+      'SQL',
+      'API Integration',
+    ],
+    // gallery: ['projects/Harmony_Energy_ooomjf'],
+    folderUrl: '/Harmony Brochure.pdf',
     liveUrl: 'https://harmony.energy',
     featured: true,
   },
+  // {
+  //   id: '7',
+  //   title: 'Blitxz – Robottaxi Dashboard',
+  //   description:
+  //     'Blitxz is a fullstack dashboard application developed as part of my bachelor thesis. The backend is built using Spring Boot and follows a hexagonal architecture to isolate domain logic from external systems such as the PostgreSQL database. The frontend is developed with Vue 3, Axios, and Pinia for state management. The dashboard includes CRUD operations for vehicle and ride management, user authentication via Spring Security, and route guards for secure frontend navigation. I applied DTOs to protect sensitive data, structured the backend with clean architectural layers, and focused on a modular, testable system. This project demonstrates strong backend architecture and smooth API communication between frontend and backend.',
+  //   image: 'projects/Blitxz_dashboard_cover',
+  //   tags: [
+  //     'Spring Boot',
+  //     'Hexagonal Architecture',
+  //     'PostgreSQL',
+  //     'Vue 3',
+  //     'Axios',
+  //     'Pinia',
+
+  //     'Spring Security',
+  //     'REST API',
+  //     'Maven',
+  //   ],
+  //   liveUrl: '',
+  //   featured: true,
+  // },
 ]
 
 export default Data

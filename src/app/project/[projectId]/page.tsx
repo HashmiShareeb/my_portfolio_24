@@ -107,6 +107,52 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
         <p className="text-md leading-relaxed  dark:text-slate-400 font-medium">
           {project.description}
         </p>
+        {/* Extra Sections with Text + Image */}
+        {project.sections?.map((section, index) => (
+          <div key={index} className="my-12 space-y-4">
+            {section.title && (
+              <h3 className="text-xl font-semibold text-teal-500">
+                {section.title}
+              </h3>
+            )}
+            {section.image && (
+              <CldImage
+                src={section.image}
+                alt={section.title ?? `Section image ${index + 1}`}
+                width={1200}
+                height={600}
+                className="rounded-lg shadow-md"
+              />
+            )}
+            {section.text && (
+              <p className="text-md leading-relaxed dark:text-slate-400">
+                {section.text}
+              </p>
+            )}
+          </div>
+        ))}
+
+        {/* Extra Image Gallery */}
+        {(project.gallery?.length ?? 0) > 0 && (
+          <div className="mt-10">
+            <h3 className="text-lg font-semibold text-teal-400 mb-4">
+              More Images
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {(project.gallery ?? []).map((img, idx) => (
+                <CldImage
+                  key={idx}
+                  src={img}
+                  alt={`Extra image ${idx + 1}`}
+                  width={600}
+                  height={400}
+                  className="rounded-xl shadow-lg"
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="mx-1 m-6 flex items-center gap-4">
           {project.githubUrl && (
             <CTA
