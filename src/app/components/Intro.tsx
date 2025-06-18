@@ -74,7 +74,7 @@ const Intro = () => {
         </CTA>
 
         <a
-          href="/cv_shareeb_2025_1.pdf"
+          href="/cv_shareeb_2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
