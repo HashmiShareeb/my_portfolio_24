@@ -79,13 +79,13 @@ const Navbar: React.FC = () => {
           >
             Home
           </Link>
-          <Link
+          {/* <Link
             href="/#about"
             onClick={closeMenu}
             className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive('about')}`}
           >
             about
-          </Link>
+          </Link> */}
           <Link
             href="/#projects"
             onClick={closeMenu}

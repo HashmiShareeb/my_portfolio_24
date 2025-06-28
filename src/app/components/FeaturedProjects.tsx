@@ -39,7 +39,7 @@ const FeaturedProjects = () => {
           .slice(0, 3)
           .map((project: ProjectData) => (
             <motion.div
-              className="py-2"
+              className="py-2 relative"
               key={project.id}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -57,18 +57,24 @@ const FeaturedProjects = () => {
                   className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-[400px] h-96"
                 />
               </div>
+
+              {/* {project.label && (
+                <span className="absolute top-4 left-4 px-3 py-1 text-xs font-bold rounded-full text-white bg-gradient-to-r from-teal-500 to-blue-600 shadow-lg">
+                  {project.label}
+                </span>
+              )} */}
+
               <div className="mt-4">
                 <h2 className="text-2xl font-bold text-transparent">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
                     {project.title}
                   </span>
                 </h2>
-                {/* <a
-                href={'/project/' + project.id}
-                className="text-teal-400 hover:underline hover:text-teal-300 transition-colors"
-              >
-                Read more
-              </a> */}
+                {project.label && (
+                  <p className="mt-2 dark:text-slate-400  text-base font-medium">
+                    {project.label}
+                  </p>
+                )}
                 <Link href={'/project/' + project.id}>
                   <button className="group inline transition duration-300 text-teal-400 relative">
                     <span className="flex items-center gap-2 group-hover:text-teal-300 group-focus:text-teal-300 mt-2">

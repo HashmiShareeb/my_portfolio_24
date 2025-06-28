@@ -2,6 +2,7 @@ export interface ProjectData {
   id: string
   title: string
   description: string
+  label?: string //for the project card
   image: string
   gallery?: string[]
   githubUrl?: string

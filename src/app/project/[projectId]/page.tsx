@@ -55,44 +55,47 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
       className="min-h-screen flex flex-col my-10"
     >
       {/* Fixed back button: always top, spaced, with breathing room, supports dark/light */}
-      <div className="fixed top-4 left-4 z-20">
-        <Link href="/project" passHref legacyBehavior>
-          <button
-            className="group flex items-center gap-2 text-teal-500 hover:text-teal-400 transition-colors
-         px-4 py-2 rounded-full
-          
-          space-x-2"
-            style={{ minWidth: 44, minHeight: 44 }}
-          >
-            <ChevronLeft
-              size={22}
-              className="transition-transform duration-300 transform group-hover:-translate-x-1 group-hover:text-teal-400 group-focus:text-teal-400"
-            />
-            <span className="sr-only md:not-sr-only group-hover:text-teal-400 group-focus:text-teal-400">
-              Projects
-            </span>
-          </button>
+      <div className="fixed top-10 left-4 z-20">
+        <Link
+          href="/project"
+          className="group flex items-center gap-2 text-teal-500 hover:text-teal-400 transition-colors px-4 py-2 rounded-full space-x-2 bg-white/80 dark:bg-slate-900/80 shadow"
+          style={{ minWidth: 44, minHeight: 44 }}
+        >
+          <ChevronLeft
+            size={22}
+            className="transition-transform duration-300 transform group-hover:-translate-x-1 group-hover:text-teal-400 group-focus:text-teal-400"
+          />
+          <span className="sr-only md:not-sr-only group-hover:text-teal-400 group-focus:text-teal-400 ">
+            Projects
+          </span>
         </Link>
       </div>
 
-      <CldImage
-        src={project.image}
-        alt={project.title}
-        width="1400"
-        height="600"
-        quality="95"
-        className="mx-auto my-[3.5rem] overflow-hidden shadow-lg dark:shadow-none lg:rounded-xl "
-        priority={true}
-      />
       <div className="px-4 md:px-32 lg:px-64">
+        <CldImage
+          src={project.image}
+          alt={project.title}
+          width="1400"
+          height="600"
+          quality="95"
+          className="mx-auto my-8 overflow-hidden shadow-lg dark:shadow-none lg:rounded-xl "
+          priority={true}
+        />
+        {/* label */}
+        {project.label && (
+          <span className="inline-block mb-4 px-3 py-1 text-sm font-semibold rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300">
+            {project.label}
+          </span>
+        )}
         <h2
           className="text-2xl font-bold text-transparent 
-       -mt-8 mb-4"
+        mb-4"
         >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
             {project.title}
           </span>
         </h2>
+
         {/* tags */}
         <div className="flex flex-wrap gap-2 mb-6">
           {project.tags.map(tag => (

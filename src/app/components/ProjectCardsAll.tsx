@@ -17,7 +17,7 @@ const ProjectCards = () => {
       id="projects"
       className="mx-auto lg:py-10 py-4"
     >
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {Data.map((project: ProjectData) => (
           <motion.div
             className="py-2"
@@ -44,6 +44,11 @@ const ProjectCards = () => {
                   {project.title}
                 </span>
               </h2>
+              {project.label && (
+                <p className="mt-2 dark:text-slate-400  text-base font-medium">
+                  {project.label}
+                </p>
+              )}
               <Link href={'/project/' + project.id}>
                 <button className="group inline transition duration-300 text-teal-400 relative">
                   <span className="flex items-center gap-2 group-hover:text-teal-300 group-focus:text-teal-300 mt-2">

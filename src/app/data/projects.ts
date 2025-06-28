@@ -3,7 +3,8 @@ import { ProjectData } from '../interfaces/projects.interface'
 const Data: ProjectData[] = [
   {
     id: '1',
-    title: 'Digital Patient Twin - Delaware',
+    title: 'Digital Patient Twin',
+    label: 'Industry Project',
     description:
       'During Industry Project i was assigned with a team of talanted developers and worked with Delaware. The Digital Patient Twin is a real-time monitoring dashboard designed to empower doctors with instant access to patient data. By providing a user-friendly interface, doctors can efficiently manage patient information and enhance patient care. Collaborating closely with my team members, I integrated backend data seamlessly into the frontend. This cohesive approach ensures that doctors receive accurate and up-to-date patient information. Due the company policy I can unfortunately not display the backend code online because of the company policy.',
     image: 'projects/xkgex34u9riqoqcbpehu',
@@ -25,6 +26,7 @@ const Data: ProjectData[] = [
   {
     id: '2',
     title: 'TimeTable App',
+    label: 'SmartApp Development',
     description:
       'For this project, I made a timetable app that shows the timetable of each course (which is simulated). This app is made with Flutter, using the calender_view package to display the timetable. I also used firebase for the user authentication and firebase as the database to store the added event from each user. This was a project I had to make in the class called SmartApp Development, where we use Flutter and Dart to make a mobile application.',
     image: 'projects/ifzri2p4xyvtvhmqdczf',
@@ -37,6 +39,7 @@ const Data: ProjectData[] = [
   {
     id: '3',
     title: 'My Portfolio',
+
     description:
       'This is my portfolio website where I showcase my projects, skills and more about myself. This website is made with Next.js, Tailwind CSS, TypeScript and also used Framer Motion for animations for the webpage. I also used Cloudinary Image component to optimize the images.',
     image: 'projects/aw6t5upukymx6fsdcwpx',
@@ -62,6 +65,7 @@ const Data: ProjectData[] = [
   {
     id: '5',
     title: 'The Movie App',
+    label: 'Interaction Design',
     description:
       'An app that shows the latest movies with movie ratings and a searchbar to search for your favorite movies. This app is made with The Movie Database (TMDb) API. There is a light mode option as well, but it is based on the settings of your device/system where the dark mode or light mode is applied. This was a project I had to make in the class called Interaction Design, where we use CSS variables and make use of standard CSS and Vanilla JavaScript to display data and visualize it properly.',
     image: 'projects/ex1pog8nnwhlf8dnmmnv',
@@ -74,6 +78,7 @@ const Data: ProjectData[] = [
   {
     id: '6',
     title: 'Harmony Energy',
+    label: 'Internship',
     description:
       "During my internship at Harmony Energy, I contributed to both their marketing website and their internal dashboard. I recreated the entire website using modern technologies such as Svelte, TypeScript, and Tailwind CSS, and implemented i18n using Svelte Stores for locale and language management. On the internal 'My Harmony Dashboard', I worked on multiple core features including the dynamic device management page, onboarding flow (with GoLang autodetection script), energy forecasting charts, and a logging component. I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements.",
     image: 'Harmony_Energy_1_idesuy',
@@ -81,8 +86,7 @@ const Data: ProjectData[] = [
     sections: [
       {
         title: 'Marketing Website',
-        image:
-          '2025-06-10_13.40.53_harmony.energy_24c07fcd9430_hyueuo',
+        image: '2025-06-10_13.40.53_harmony.energy_24c07fcd9430_hyueuo',
       },
     ],
 
@@ -111,6 +115,7 @@ const Data: ProjectData[] = [
   //   description:
   //     'Blitxz is a fullstack dashboard application developed as part of my bachelor thesis. The backend is built using Spring Boot and follows a hexagonal architecture to isolate domain logic from external systems such as the PostgreSQL database. The frontend is developed with Vue 3, Axios, and Pinia for state management. The dashboard includes CRUD operations for vehicle and ride management, user authentication via Spring Security, and route guards for secure frontend navigation. I applied DTOs to protect sensitive data, structured the backend with clean architectural layers, and focused on a modular, testable system. This project demonstrates strong backend architecture and smooth API communication between frontend and backend.',
   //   image: 'projects/Blitxz_dashboard_cover',
+  //   label: 'Bachelor Thesis',
   //   tags: [
   //     'Spring Boot',
   //     'Hexagonal Architecture',
@@ -118,12 +123,10 @@ const Data: ProjectData[] = [
   //     'Vue 3',
   //     'Axios',
   //     'Pinia',
-
   //     'Spring Security',
   //     'REST API',
   //     'Maven',
   //   ],
-  //   liveUrl: '',
   //   featured: true,
   // },
 ]
