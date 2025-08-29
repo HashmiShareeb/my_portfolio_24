@@ -16,6 +16,7 @@ import { motion } from 'framer-motion'
 import { CldImage } from 'next-cloudinary'
 import CTA from '@/app/components/CTA'
 import Data from '@/app/data/projects'
+import Image from 'next/image'
 
 const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
   // Find the project with the matching id
@@ -118,16 +119,29 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
                 {section.title}
               </h3>
             )}
-            {section.image && (
-              <CldImage
-                src={section.image}
-                width={800}
-                height={450}
-                quality={95}
-                alt={section.title ?? `Section image ${index + 1}`}
-                className="rounded-lg shadow-md"
-              />
-            )}
+            {section.image &&
+              (section.image.startsWith('/') ? (
+                <Image
+                  src={section.image}
+                  width={800}
+                  height={450}
+                  alt={section.title ?? `Section image ${index + 1}`}
+                  className="rounded-lg shadow-md"
+                  style={{ objectFit: 'cover', width: 'auto', height: 'auto' }}
+                  priority={true}
+                />
+              ) : (
+                <CldImage
+                  src={section.image}
+                  width={800}
+                  height={450}
+                  quality={95}
+                  alt={section.title ?? `Section image ${index + 1}`}
+                  className="rounded-lg shadow-md"
+                  style={{ width: 'auto', height: 'auto' }}
+                  priority={true}
+                />
+              ))}
             {section.text && (
               <p className="text-md leading-relaxed dark:text-slate-400">
                 {section.text}
