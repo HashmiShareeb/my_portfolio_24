@@ -121,6 +121,7 @@ const Data: ProjectData[] = [
       'Hexagonal Architecture',
       'PostgreSQL',
       'Vue 3',
+      'JPA',
       'Axios',
       'Pinia',
       'Spring Security',
@@ -131,19 +132,23 @@ const Data: ProjectData[] = [
       {
         title: 'Hexagonal Architecture',
         image: '/images/hexagonal_architecture.png',
-        text: 'Deze architectuur een duidelijke scheiding tussen interne domeinen en externe componenten door middel van goed gedefinieerde interfaces de (‘Ports’) en implementaties van de interface met externe systemen (de ‘Adapters’) te gebruiken.  .',
+        text: 'This architecture enforces a clear separation between the internal domain and external systems, such as the UI and the database, by using interfaces (Ports) and implementations for each external dependency (Adapters). The domain layer contains the core business logic and is independent of any frameworks or technologies. The application layer orchestrates use cases and interacts with the domain layer, while the infrastructure layer handles technical details like database access and web communication. This structure enhances maintainability, testability, and flexibility, allowing easy replacement of external systems without impacting the core logic.',
       },
       {
         title: 'User Roles',
-        text: 'The system supports multiple roles: **Admin** (management of vehicles, rides) . With Spring Security, these roles are strictly enforced to ensure secure access.',
+        text: 'The system defines two roles: Admin and User. Admins can manage vehicles and oversee rides, while Users can request, start, and complete rides. These roles are enforced through Spring Security to ensure secure access control.',
       },
       {
         title: 'Frontend',
-        text: 'The frontend was built using Vue 3, Pinia, and Axios. It provides a responsive dashboard with secure navigation via route guards. CRUD functionality makes managing vehicles and rides straightforward and user-friendly.',
+        text: 'Built with Vue 3 and Vite, using Pinia and LocalStorage for state management and Axios for API communication. The dashboard features secure navigation via Vue Router guards, responsive CRUD views for vehicles and rides, and a clear separation between the user Roles so that each role has access to the appropriate routes.',
       },
       {
         title: 'Backend',
-        text: 'The backend is powered by Spring Boot and PostgreSQL, structured following the hexagonal architecture. Sensitive data is protected using DTOs, and the application is organized into distinct layers for domain, application, and infrastructure.',
+        text: 'Powered by Spring Boot with JPA and PostgreSQL, the backend follows a hexagonal architecture with distinct domain, application, and infrastructure layers. Data Transfer Objects (DTOs) protect sensitive fields, while WebConfig ensures secure CORS communication with the frontend. Authentication and authorization are handled via Spring Security.',
+      },
+      {
+        title: 'Research & Learning',
+        text: 'During the project, I explored different architectural approaches (MVC, layered, clean architecture) and compared them with hexagonal architecture. Community feedback (e.g. Spring and Vue forums, Reddit) influenced pragmatic decisions such as combining JPA annotations with a domain-driven model. The project demonstrates my ability to research, evaluate, and implement complex fullstack architectures.',
       },
     ],
     featured: true,
