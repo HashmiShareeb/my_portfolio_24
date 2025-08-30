@@ -80,7 +80,7 @@ const Intro = () => {
           download
           className="group inline transition duration-300"
         >
-          Download CV
+          Download Resume
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 dark:bg-white bg-black"></span>
         </a>
       </div>

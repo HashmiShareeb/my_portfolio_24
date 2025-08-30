@@ -4,7 +4,10 @@ const Footer = () => {
   return (
     <footer className="w-full  dark:bg-gray-800 dark:text-white py-3 align-center">
       <div className="container mx-auto text-center">
-        <p>Made with ❤️ by Shareeb Hashmi</p>
+        <p>
+          Made with ❤️ by Shareeb Hashmi
+          {` © ${new Date().getFullYear()}`}
+        </p>
       </div>
     </footer>
   )

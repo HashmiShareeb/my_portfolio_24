@@ -1,6 +1,8 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import CTA from './CTA'
+import { Download, Folder, Github, Linkedin } from 'lucide-react'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,12 +25,28 @@ const Navbar: React.FC = () => {
     return 'text-gray-400'
   }
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [isOpen])
+
   return (
     <nav className="z-[999] relative">
-      <div className="fixed top-0  h-[3.5rem] w-full bg-white dark:bg-slate-900 bg-opacity-80 backdrop-blur-[0.5rem] shadow-sm">
+      <div className="fixed top-0  h-[3.5rem] w-full bg-white dark:bg-slate-900 dark:bg-opacity-80 bg-opacity-80 backdrop-blur-[0.5rem] shadow-sm dark:shadow-none">
         <div className="flex items-center justify-between h-full lg:px-52 px-4">
           <Link href="/" className="text-lg font-bold">
-            Shareeb <span className="text-teal-400 font-extrabold">Hashmi</span>
+            Shareeb{' '}
+            <span className="text-teal-600 dark:text-teal-500 font-extrabold">
+              Hashmi
+            </span>
           </Link>
           <button
             onClick={toggleMenu}
@@ -69,7 +87,7 @@ const Navbar: React.FC = () => {
       <div
         className={`${
           isOpen ? 'block' : 'hidden'
-        } fixed top-[3.5rem] left-0 w-full h-screen bg-white dark:bg-slate-950 bg-opacity-80  backdrop-blur-[0.5rem] dark:bg-opacity-80 dark:backdrop-blur-[0.5rem] shadow-sm dark:shadow-none`}
+        } fixed top-[3.5rem] left-0 w-full h-screen bg-white dark:bg-slate-900 bg-opacity-80  backdrop-blur-[0.5rem] dark:bg-opacity-80 dark:backdrop-blur-[0.5rem] shadow-sm dark:shadow-none`}
       >
         <div className="flex flex-col gap-10 items-center justify-center lg:h-full h-3/4">
           <Link
@@ -107,6 +125,37 @@ const Navbar: React.FC = () => {
           >
             Contact
           </Link>
+          <CTA href="/cv_shareeb_2025.pdf" target="_blank" download>
+            <Download size={32} />
+            <h1 className="text-lg font-bold ml-2">Download Resume</h1>
+            <span className="sr-only">Resume</span>
+          </CTA>
+          <div className="flex gap-4 mt-4 justify-center w-full">
+            <Link
+              href="https://github.com/HashmiShareeb"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="flex items-center"
+            >
+              <Github
+                size={28}
+                className="text-gray-400 hover:text-teal-400 transition-colors duration-200"
+              />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/shareeb-hashmi-569b38161/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="flex items-center"
+            >
+              <Linkedin
+                size={28}
+                className="text-gray-400 hover:text-teal-400 transition-colors duration-200"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
