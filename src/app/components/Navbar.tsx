@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-full lg:px-52 px-4">
           <Link href="/" className="text-lg font-bold">
             Shareeb{' '}
-            <span className="text-teal-600 dark:text-teal-500 font-extrabold">
+            <span className="text-teal-500 dark:text-teal-400 font-extrabold">
               Hashmi
             </span>
           </Link>

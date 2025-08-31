@@ -8,6 +8,7 @@ import {
   Link2,
   Youtube,
   File,
+  PlayCircle,
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -129,9 +130,7 @@ export default function ProjectDetail() {
         </p>
 
         {/* ---------- Sections (clean layout) ---------- */}
-        {/* -------------------------------------------------
-            MAIN SECTION (identical rules as all others)
-        -------------------------------------------------- */}
+
         {project.sections?.[0] && (
           <section className="my-16 grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-6 items-start">
             {/* Text block */}
@@ -148,7 +147,7 @@ export default function ProjectDetail() {
                 </h3>
               )}
               {project.sections[0].text && (
-                <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+                <p className="text-slate-700 dark:text-slate-400 leading-relaxed text-justify font-medium">
                   {project.sections[0].text}
                 </p>
               )}
@@ -168,7 +167,7 @@ export default function ProjectDetail() {
         )}
 
         {/* -------------------------------------------------
-            REMAINING SECTIONS (same logic)
+            OTHER SECTIONS
         -------------------------------------------------- */}
         {project.sections?.slice(1).map((section, index) => {
           const hasImage = !!section.image
@@ -191,7 +190,7 @@ export default function ProjectDetail() {
                   </h3>
                 )}
                 {section.text && (
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+                  <p className="text-slate-700 dark:text-slate-400 leading-relaxed text-justify font-medium">
                     {section.text}
                   </p>
                 )}
@@ -259,7 +258,7 @@ export default function ProjectDetail() {
           )}
           {project.videoUrl && (
             <CTA href={project.videoUrl} target="_blank" ariaLabel="VideoUrl">
-              <Youtube size={32} />
+              <PlayCircle size={32} />
             </CTA>
           )}
           {project.folderUrl && (

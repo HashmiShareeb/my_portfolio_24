@@ -39,7 +39,7 @@ const Data: ProjectData[] = [
   {
     id: '3',
     title: 'My Portfolio',
-
+    label: 'Personal Project',
     description:
       'This is my portfolio website where I showcase my projects, skills and more about myself. This website is made with Next.js, Tailwind CSS, TypeScript and also used Framer Motion for animations for the webpage. I also used Cloudinary Image component to optimize the images.',
     image: 'projects/My_portfolio-lightmode',
@@ -55,11 +55,11 @@ const Data: ProjectData[] = [
   },
   {
     id: '4',
-    title: 'Blitxz – Robottaxi Dashboard',
+    title: 'Blitx – Robottaxi Dashboard',
     description:
-      'Blitxz is a fullstack dashboard application developed as part of my bachelor thesis. The backend is built using Spring Boot and follows a hexagonal architecture to isolate domain logic from external systems such as the PostgreSQL database. The frontend is developed with Vue 3, Axios, and Pinia for state management. The dashboard includes CRUD operations for vehicle and ride management, user authentication via Spring Security, and route guards for secure frontend navigation. I applied DTOs to protect sensitive data, structured the backend with clean architectural layers, and focused on a modular, testable system. This project demonstrates strong backend architecture and smooth API communication between frontend and backend.',
+      'Blitx Robottaxi Dashboard is a scalable Full-Stack proof-of-concept project for managing autonomous vehicles. Designed with hexagonal architecture in mind and a primary focus on Spring Boot backend, the system supports two user roles and includes map integration via MapBox, as well as CRUD functionalities and other backend logic implemented in the Vue 3 frontend. Developed for research project with a focus on scalability and user-friendliness. This project also illustrates the importance of clean architecture and separation of concerns in software development.',
     image: '/projects/Bachelor_Proef_zwj5zi',
-    label: 'Bachelor Thesis',
+    label: 'Research Project',
     tags: [
       'Spring Boot',
       'Hexagonal Architecture',
@@ -77,16 +77,16 @@ const Data: ProjectData[] = [
       {
         title: 'Hexagonal Architecture',
         image: '/images/hexagonal_architecture.png',
-        text: 'This architecture enforces a clear separation between the internal domain and external systems, such as the UI and the database, by using interfaces (Ports) and implementations for each external dependency (Adapters). The domain layer contains the core business logic and is independent of any frameworks or technologies. The application layer orchestrates use cases and interacts with the domain layer, while the infrastructure layer handles technical details like database access and web communication. This structure enhances maintainability, testability, and flexibility, allowing easy replacement of external systems without impacting the core logic.',
+        text: 'Hexagonal architecture, also known as "Ports and Adapters" or DDD (Domain-Driven Design), is a software architecture aimed at isolating the core of the application (domain logic) from external systems such as databases, frameworks, user interfaces, and container technologies like Docker. This architecture establishes a clear separation between internal domains and external components by using well-defined interfaces (Ports) and implementations of these interfaces to interact with external systems (Adapters).',
       },
       {
         title: 'User Roles',
-        text: 'The system defines two roles: Admin and User. Admins can manage vehicles and oversee rides, while Users can request, start, and complete rides. These roles are enforced through Spring Security to ensure secure access control.',
+        text: 'This project uses two roles: ADMIN and USER. Admin can manage the vehicles and see the rides, while User can request rides and look at their rides history. These roles are enforced through Spring Security to ensure secure access control.',
       },
       {
         title: 'Frontend',
         text: 'Built with Vue 3 and Vite, using Pinia and LocalStorage for state management and Axios for API communication. The dashboard features secure navigation via Vue Router guards, responsive CRUD views for vehicles andrides, and a clear separation between the user roles. The user can request rides and the route backend fetches the coordinates with the mapbox map and draws the routes.',
-        // image: '/images/routesummary.png',
+        image: 'projects/routesummary_ponmty',
       },
       {
         title: 'Backend',
@@ -94,11 +94,14 @@ const Data: ProjectData[] = [
       },
       {
         title: 'Research & Learning',
-        text: 'During the project, I explored different architectural approaches (MVC, layered, clean architecture) and compared them with hexagonal architecture. Community feedback (e.g. Spring and Vue forums, Reddit) influenced pragmatic decisions such as combining JPA annotations with a domain-driven model. The project demonstrates my ability to research, evaluate, and implement complex fullstack architectures.',
+        text: 'During the project, I explored different architectural approaches (MVC, layered, clean architecture) and compared them with hexagonal architecture. Community feedback (e.g. Spring and other communities on Reddit and forums) influenced pragmatic decisions such as combining JPA annotations with a domain-driven model. The project demonstrates my ability to research, evaluate, and implement complex fullstack architectures.',
       },
     ],
     githubUrl: 'https://github.com/HashmiShareeb/researchproject_backend',
-    gallery: ['projects/routesummary_bpo3pi'],
+    gallery: [
+      'projects/Screenshot_2025-08-30_221945_alcyou',
+      'projects/Screenshot_2025-08-30_221416_eikydn',
+    ],
 
     featured: true,
   },
@@ -114,7 +117,7 @@ const Data: ProjectData[] = [
       {
         title: 'Marketing Website',
         image: '2025-06-10_13.40.53_harmony.energy_24c07fcd9430_hyueuo',
-        text: 'I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process.',
+        text: 'I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process. I also got the freedom to make my own layout as my intership mentor was impressed by my UI/UX and frontend skills, it was a fun project to work on and a good introduction on using Svelte which may come in handy for future projects 😉.',
       },
     ],
 
