@@ -17,13 +17,13 @@ const FeaturedProjects = () => {
       animate={{ opacity: 1, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       id="projects"
-      className="px-4 mx-auto lg:py-32 py-4"
+      className="px-4 mx-auto py-4 lg:py-24"
     >
       <div className="flex lg:flex-row flex-col items-center ">
         <GradientTitle title="featured projects" IsCentered={false} />
         <Link
           href="/project"
-          className="lg:ml-auto group inline transition duration-300 text-teal-400 relative"
+          className="lg:ml-auto group inline transition duration-300 dark:text-teal-400 text-teal-500 relative"
         >
           <span className="flex items-center gap-2 group-hover:text-teal-300">
             show all projects
@@ -34,7 +34,7 @@ const FeaturedProjects = () => {
           </span>
         </Link>
       </div>
-      <div className="mt-8 flex gap-4 flex-wrap lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
+      <div className="mt-8 flex gap-4 lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
         {featured.map((project: ProjectData) => (
           <motion.div
             className="py-2 relative"
@@ -44,15 +44,15 @@ const FeaturedProjects = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <div>
+            <div className="w-full">
               <CldImage
-                width={400}
-                height={300}
+                width={800}
+                height={600}
                 src={project.image}
                 alt={project.title}
                 quality={100}
                 priority={true}
-                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-[400px] h-96"
+                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-full h-full"
               />
             </div>
 
@@ -74,7 +74,7 @@ const FeaturedProjects = () => {
                 </p>
               )}
               <Link href={'/project/' + project.id}>
-                <button className="group inline transition duration-300 text-teal-400 relative">
+                <button className="group inline transition duration-300 dark:text-teal-400 text-teal-500 relative">
                   <span className="flex items-center gap-2 group-hover:text-teal-300 group-focus:text-teal-300 mt-2">
                     View Project
                     <ChevronRight

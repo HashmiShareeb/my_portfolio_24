@@ -39,7 +39,7 @@ const Data: ProjectData[] = [
   {
     id: '3',
     title: 'My Portfolio',
-    label: 'Personal Project',
+    label: 'Frontend Development',
     description:
       'This is my portfolio website where I showcase my projects, skills and more about myself. This website is made with Next.js, Tailwind CSS, TypeScript and also used Framer Motion for animations for the webpage. I also used Cloudinary Image component to optimize the images.',
     image: 'projects/My_portfolio-lightmode',

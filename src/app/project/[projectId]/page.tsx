@@ -6,13 +6,12 @@ import {
   Github,
   Earth,
   Link2,
-  Youtube,
   File,
   PlayCircle,
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import { CldImage } from 'next-cloudinary'
 import { motion } from 'framer-motion'
 
@@ -63,11 +62,17 @@ export default function ProjectDetail() {
           <Folder size={40} />
           Project not found
         </h1>
-        <Link
-          href="/project"
-          className="mt-4 text-teal-400 hover:text-teal-300 flex items-center gap-2"
-        >
-          back to projects <ChevronLeft size={20} />
+
+        <Link href="/project/">
+          <button className="group inline transition duration-300 dark:text-teal-400 text-teal-500 relative">
+            <span className="flex items-center gap-2 group-hover:text-teal-300 group-focus:text-teal-300 mt-2">
+              <ChevronLeft
+                size={20}
+                className="transition-transform duration-300 transform group-hover:-translate-x-1"
+              />
+              back to projects
+            </span>
+          </button>
         </Link>
       </div>
     )
@@ -81,23 +86,27 @@ export default function ProjectDetail() {
       className="min-h-screen flex flex-col my-10"
     >
       <div className="fixed top-10 left-4 z-20">
-        <Link
-          href="/project"
-          className="group flex items-center gap-2 text-teal-500 hover:text-teal-400 transition-colors px-4 py-2 rounded-full bg-white/80 dark:bg-slate-900/80 shadow"
-        >
-          <ChevronLeft size={22} />
-          <span className="sr-only md:not-sr-only">Projects</span>
+        <Link href="/project">
+          <button className="relative inline group transition duration-300 text-teal-500 dark:text-teal-400">
+            <span className="mt-2 flex items-center gap-2 transition-colors group-hover:text-teal-300 group-focus:text-teal-300 px-4 py-2 rounded-full bg-white/80 dark:bg-slate-900/80 shadow dark:shadow-none">
+              <ChevronLeft
+                size={20}
+                className="transform transition-transform duration-300 lg:group-hover:-translate-x-1"
+              />
+              <span className="sr-only md:not-sr-only">Projects</span>
+            </span>
+          </button>
         </Link>
       </div>
 
-      <div className="px-4 md:px-32 lg:px-64">
+      <div className="px-4 md:px-40 lg:px-64">
         <CldImage
           src={project.image}
           alt={project.title}
           width={1400}
           height={600}
           quality={95}
-          className="mx-auto my-8 overflow-hidden shadow-lg dark:shadow-none lg:rounded-xl"
+          className="mx-auto my-8 overflow-hidden shadow-lg dark:shadow-none rounded-xl w-full h-auto"
           priority
         />
 

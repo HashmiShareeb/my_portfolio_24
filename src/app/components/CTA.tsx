@@ -30,13 +30,13 @@ function CTA({
     <>
       <motion.button
         whileHover={{
-          scale: 1.2,
+          scale: 1.05,
           transition: { duration: 0.2 },
         }}
         whileTap={{ scale: 0.9 }}
         onClick={handleClick}
         whileFocus={{
-          scale: 1.2,
+          scale: 1.0,
           transition: { duration: 0.2 },
         }}
       >

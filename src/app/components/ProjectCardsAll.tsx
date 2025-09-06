@@ -50,7 +50,7 @@ const ProjectCards = () => {
                 </p>
               )}
               <Link href={'/project/' + project.id}>
-                <button className="group inline transition duration-300 text-teal-400 relative">
+                <button className="group inline transition duration-300 dark:text-teal-400 text-teal-500 relative">
                   <span className="flex items-center gap-2 group-hover:text-teal-300 group-focus:text-teal-300 mt-2">
                     View Project
                     <ChevronRight
