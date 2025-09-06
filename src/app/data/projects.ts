@@ -119,6 +119,11 @@ const Data: ProjectData[] = [
         image: '2025-06-10_13.40.53_harmony.energy_24c07fcd9430_hyueuo',
         text: 'I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process. I also got the freedom to make my own layout as my intership mentor was impressed by my UI/UX and frontend skills, it was a fun project to work on and a good introduction on using Svelte which may come in handy for future projects 😉.',
       },
+
+      {
+        title: 'My Harmony Dashboard',
+        text: 'On the internal dashboard I worked on multiple core features including the dynamic device management page, onboarding flow (with GoLang autodetection script), energy forecasting charts, and a logging component. I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements. This was a great learning experience as I got to work with different technologies and frameworks, and also got to understand how a real-world application is built and maintained.',
+      },
     ],
 
     tags: [

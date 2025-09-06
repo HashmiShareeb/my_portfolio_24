@@ -37,7 +37,7 @@ const FeaturedProjects = () => {
       <div className="mt-8 flex gap-4 lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
         {featured.map((project: ProjectData) => (
           <motion.div
-            className="py-2 relative"
+            className="py-2 relative group"
             key={project.id}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -52,7 +52,7 @@ const FeaturedProjects = () => {
                 alt={project.title}
                 quality={100}
                 priority={true}
-                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-full h-full"
+                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-full h-full transform transition-transform duration-300 group-hover:scale-105"
               />
             </div>
 

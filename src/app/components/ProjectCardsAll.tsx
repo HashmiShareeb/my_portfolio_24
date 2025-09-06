@@ -20,12 +20,12 @@ const ProjectCards = () => {
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {Data.map((project: ProjectData) => (
           <motion.div
-            className="py-2"
+            className="py-2 group"
             key={project.id}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
           >
             <div className="w-full ">
               <CldImage
@@ -35,7 +35,7 @@ const ProjectCards = () => {
                 alt={project.title}
                 quality={100}
                 priority={true}
-                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-full h-full"
+                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-full h-full transform transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="mt-4">

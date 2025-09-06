@@ -139,9 +139,14 @@ export default function ProjectDetail() {
         </p>
 
         {/* ---------- Sections (clean layout) ---------- */}
-
         {project.sections?.[0] && (
-          <section className="my-16 grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-6 items-start">
+          <motion.section
+            className="my-16 grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-6 items-start"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {/* Text block */}
             <div
               className={
@@ -172,7 +177,7 @@ export default function ProjectDetail() {
                 />
               </div>
             )}
-          </section>
+          </motion.section>
         )}
 
         {/* -------------------------------------------------
@@ -181,9 +186,13 @@ export default function ProjectDetail() {
         {project.sections?.slice(1).map((section, index) => {
           const hasImage = !!section.image
           return (
-            <section
+            <motion.section
               key={index}
               className="my-16 grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-6 items-start"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               {/* Text */}
               <div
@@ -215,13 +224,19 @@ export default function ProjectDetail() {
                   />
                 </div>
               )}
-            </section>
+            </motion.section>
           )
         })}
 
         {/* ---------- Gallery ---------- */}
         {(project.gallery?.length ?? 0) > 0 && (
-          <div className="mt-6">
+          <motion.div
+            className="mt-6"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {/* <h3 className="text-lg font-semibold text-teal-400 mb-4">
               More Images
             </h3> */}
@@ -230,7 +245,14 @@ export default function ProjectDetail() {
               style={{ columnGap: '1.5rem' }}
             >
               {(project.gallery ?? []).map((img, idx) => (
-                <div key={idx} className="break-inside-avoid mb-6">
+                <motion.div
+                  key={idx}
+                  className="break-inside-avoid mb-6"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: idx * 0.08 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                >
                   <CldImage
                     src={img}
                     alt={`Extra ${idx + 1}`}
@@ -238,10 +260,10 @@ export default function ProjectDetail() {
                     height={400}
                     className="rounded-xl shadow-lg w-full h-auto"
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         )}
 
         {/* ---------- CTA Links ---------- */}
