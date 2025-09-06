@@ -29,7 +29,7 @@ const Data: ProjectData[] = [
     label: 'SmartApp Development',
     description:
       'For this project, I made a timetable app that shows the timetable of each course (which is simulated). This app is made with Flutter, using the calender_view package to display the timetable. I also used firebase for the user authentication and firebase as the database to store the added event from each user. This was a project I had to make in the class called SmartApp Development, where we use Flutter and Dart to make a mobile application.',
-    image: 'projects/ifzri2p4xyvtvhmqdczf',
+    image: '/projects/ifzri2p4xyvtvhmqdczf',
     videoUrl:
       'https://drive.google.com/file/d/1X1Y6rSPLK4fZPHOgxgoZLFMUVkJNk4iM/view',
     githubUrl: 'https://github.com/HashmiShareeb/smartapp_project24',
@@ -42,7 +42,7 @@ const Data: ProjectData[] = [
     label: 'Frontend Development',
     description:
       'This is my portfolio website where I showcase my projects, skills and more about myself. This website is made with Next.js, Tailwind CSS, TypeScript and also used Framer Motion for animations for the webpage. I also used Cloudinary Image component to optimize the images.',
-    image: 'projects/My_portfolio-lightmode',
+    image: '/projects/My_portfolio-lightmode',
     tags: [
       'Next.js',
       'Tailwind CSS',
@@ -50,8 +50,8 @@ const Data: ProjectData[] = [
       'Cloudinary',
       'Framer Motion',
     ],
-    githubUrl: 'https://github.com/HashmiShareeb/my_portfolio',
-    gallery: ['projects/my_portfolio_dm', 'projects/my_portfolio_lm'],
+    githubUrl: 'https://github.com/HashmiShareeb/my_portfolio_24',
+    gallery: ['/projects/my_portfolio_dm', '/projects/my_portfolio_lm'],
   },
   {
     id: '4',
@@ -86,7 +86,7 @@ const Data: ProjectData[] = [
       {
         title: 'Frontend',
         text: 'Built with Vue 3 and Vite, using Pinia and LocalStorage for state management and Axios for API communication. The dashboard features secure navigation via Vue Router guards, responsive CRUD views for vehicles andrides, and a clear separation between the user roles. The user can request rides and the route backend fetches the coordinates with the mapbox map and draws the routes.',
-        image: 'projects/routesummary_ponmty',
+        image: '/projects/routesummary_ponmty',
       },
       {
         title: 'Backend',
@@ -99,8 +99,8 @@ const Data: ProjectData[] = [
     ],
     githubUrl: 'https://github.com/HashmiShareeb/researchproject_backend',
     gallery: [
-      'projects/Screenshot_2025-08-30_221945_alcyou',
-      'projects/Screenshot_2025-08-30_221416_eikydn',
+      '/projects/Screenshot_2025-08-30_221945_alcyou',
+      '/projects/Screenshot_2025-08-30_221416_eikydn',
     ],
 
     featured: true,
@@ -162,7 +162,7 @@ const Data: ProjectData[] = [
     label: 'Internship',
     description:
       "this was one of my first projects during my Intership in Exsited Webdesign (now known as Indie Group), it was a webste for a psychologist. I made this website with the use of a CMS called ProccesWire that's powered on PHP along with SCSS, VueJS, and CSS frameworks such as UIkit and Bootstrap.",
-    image: 'projects/MNaesens_slqogb',
+    image: '/projects/MNaesens_slqogb',
     tags: ['PHP', 'SCSS', 'VueJS', 'UIkit', 'Bootstrap', 'ProccesWire'],
     liveUrl: 'https://michaelnaessens.be/',
     externalLink: 'https://www.indiegroup.be/',
@@ -173,7 +173,7 @@ const Data: ProjectData[] = [
     label: 'Interaction Design',
     description:
       'An app that shows the latest movies with movie ratings and a searchbar to search for your favorite movies. This app is made with The Movie Database (TMDb) API. There is a light mode option as well, but it is based on the settings of your device/system where the dark mode or light mode is applied. This was a project I had to make in the class called Interaction Design, where we use CSS variables and make use of standard CSS and Vanilla JavaScript to display data and visualize it properly.',
-    image: 'projects/movieapp_fu3f4p',
+    image: '/projects/movieapp_fu3f4p',
     githubUrl: 'https://github.com/HashmiShareeb/movieapp',
     liveUrl: 'https://hashmishareeb.github.io/movieapp/',
     externalLink: 'https://www.themoviedb.org/',
