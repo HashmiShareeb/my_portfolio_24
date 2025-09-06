@@ -15,14 +15,16 @@ const Navbar: React.FC = () => {
     setIsOpen(false)
   }
 
-  //is active
-  const isActive = (id: string) => {
+  const [activeHash, setActiveHash] = useState<string>('')
+
+  useEffect(() => {
     if (typeof window !== 'undefined') {
-      return `#${id}` === window.location.hash
-        ? 'text-teal-400'
-        : 'text-gray-400'
+      setActiveHash(window.location.hash)
     }
-    return 'text-gray-400'
+  }, [])
+
+  const isActive = (id: string) => {
+    return `#${id}` === activeHash ? 'text-teal-400' : 'text-gray-400'
   }
 
   useEffect(() => {

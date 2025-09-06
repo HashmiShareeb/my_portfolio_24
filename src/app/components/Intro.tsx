@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import CTA from './CTA'
 import { CldImage } from 'next-cloudinary'
-import { Download } from 'lucide-react'
+import { Download, Mail } from 'lucide-react'
 
 const Intro = () => {
   return (

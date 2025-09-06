@@ -17,7 +17,7 @@ const FeaturedProjects = () => {
       animate={{ opacity: 1, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       id="projects"
-      className="px-4 mx-auto py-4 lg:py-24"
+      className="py-24 px-4 mx-auto lg:mx-0"
     >
       <div className="flex lg:flex-row flex-col items-center ">
         <GradientTitle title="featured projects" IsCentered={false} />
