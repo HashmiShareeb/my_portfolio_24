@@ -18,6 +18,7 @@ const nextConfig = {
 }
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
+  extension: /\.mdx?$/,
 })
 
 export default withMDX(nextConfig)
