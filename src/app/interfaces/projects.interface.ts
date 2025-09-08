@@ -1,7 +1,7 @@
 export interface ProjectData {
   id: string
   title: string
-  description: string
+  //description: string
   label?: string //for the project card
   image: string
   gallery?: string[]
