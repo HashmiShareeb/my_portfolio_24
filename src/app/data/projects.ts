@@ -5,7 +5,6 @@ const Data: ProjectData[] = [
     id: 'digital-patient-twin',
     title: 'Digital Patient Twin',
     label: 'Industry Project',
-    //description:'During Industry Project i was assigned with a team of talanted developers and worked with Delaware. The Digital Patient Twin is a real-time monitoring dashboard designed to empower doctors with instant access to patient data. By providing a user-friendly interface, doctors can efficiently manage patient information and enhance patient care. Collaborating closely with my team members, I integrated backend data seamlessly into the frontend. This cohesive approach ensures that doctors receive accurate and up-to-date patient information. Due the company policy I can unfortunately not display the backend code online because of the company policy.',
     image: 'projects/Digital_Patient_Twin_hr0whf',
     tags: ['Nuxt', 'TypeScript', 'Azure', 'CosmosDB', 'Dapr', 'Microservices'],
     githubUrl: 'https://github.com/JarneDel/digital-patient-twin-frontend',
@@ -15,11 +14,10 @@ const Data: ProjectData[] = [
     sections: [
       {
         title: 'Project Presentation',
-        image: 'projects/digitalpatienttwin',
+        image: '/projects/digitalpatienttwin',
         text: 'Me and my team had the honour to present this project at the Delaware HQ in Ghent, where we showcased the Digital Patient Twin to a large audience. The project was well-received, and we received positive feedback for our work.',
       },
     ],
-    // gallery: ,
   },
   {
     id: 'timetable-app',
@@ -30,7 +28,6 @@ const Data: ProjectData[] = [
       'https://drive.google.com/file/d/1X1Y6rSPLK4fZPHOgxgoZLFMUVkJNk4iM/view',
     githubUrl: 'https://github.com/HashmiShareeb/smartapp_project24',
     tags: ['Flutter', 'Dart', 'Firebase', 'Firestore'],
-    externalLink: 'https://pub.dev/packages/calendar_view',
   },
   {
     id: 'my-portfolio',
@@ -43,6 +40,8 @@ const Data: ProjectData[] = [
       'TypeScript',
       'Cloudinary',
       'Framer Motion',
+      'MDX',
+      'Vercel',
     ],
     githubUrl: 'https://github.com/HashmiShareeb/my_portfolio_24',
     gallery: ['/projects/my_portfolio_dm', '/projects/my_portfolio_lm'],
@@ -50,7 +49,6 @@ const Data: ProjectData[] = [
   {
     id: 'blitx',
     title: 'Blitx – Robottaxi Dashboard',
-    //description:'Blitx Robottaxi Dashboard is a scalable Full-Stack proof-of-concept project for managing autonomous vehicles. Designed with hexagonal architecture in mind and a primary focus on Spring Boot backend, the system supports two user roles and includes map integration via MapBox, as well as CRUD functionalities and other backend logic implemented in the Vue 3 frontend. Developed for research project with a focus on scalability and user-friendliness. This project also illustrates the importance of clean architecture and separation of concerns in software development.',
     image: '/projects/Bachelor_Proef_zwj5zi',
     label: 'Research Project',
     tags: [
@@ -79,7 +77,7 @@ const Data: ProjectData[] = [
       {
         title: 'Frontend',
         text: 'Built with Vue 3 and Vite, using Pinia and LocalStorage for state management and Axios for API communication. The dashboard features secure navigation via Vue Router guards, responsive CRUD views for vehicles andrides, and a clear separation between the user roles. The user can request rides and the route backend fetches the coordinates with the mapbox map and draws the routes.',
-        image: '/projects/routesummary_ponmty',
+        image: 'projects/routesummary_ponmty',
       },
       {
         title: 'Backend',
@@ -102,7 +100,6 @@ const Data: ProjectData[] = [
     id: 'harmony-energy',
     title: 'Harmony Energy',
     label: 'Internship',
-    //description:"During my internship at Harmony Energy, I contributed to both their marketing website and their internal dashboard. I recreated the entire website using modern technologies such as Svelte, TypeScript, and Tailwind CSS, and implemented i18n using Svelte Stores for locale and language management. On the internal 'My Harmony Dashboard', I worked on multiple core features including the dynamic device management page, onboarding flow (with GoLang autodetection script), energy forecasting charts, and a logging component. I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements.",
     image: '/projects/Harmony_Energy_lhljgf',
 
     sections: [
@@ -138,34 +135,28 @@ const Data: ProjectData[] = [
   {
     id: 'deborah-lintermans',
     title: 'Honden Coach Deborah Lintermans',
-    //description: 'during my intership in Exsited (now known as Indie Group) I made a website for a dog coach.I made this website with the use of a CMS called ProcessWire thats powered on PHP along with SCSS, VueJS, and CSS frameworks such as UIkit and Bootstrap.',
     image: '/projects/Deborah_Lintermans',
     label: 'Internship',
-    tags: ['PHP', 'SCSS', 'UIkit', 'Bootstrap', 'ProcessWire'],
+    tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'VueJS'],
     liveUrl: 'https://deborahlintermans.be/',
-    externalLink: 'https://www.indiegroup.be/',
-    featured: true,
   },
   {
     id: 'michael-naessens',
     title: 'Michael Naessens',
     label: 'Internship',
-    //description:"this was one of my first projects during my Intership in Exsited Webdesign (now known as Indie Group), it was a webste for a psychologist. I made this website with the use of a CMS called ProccesWire that's powered on PHP along with SCSS, VueJS, and CSS frameworks such as UIkit and Bootstrap.",
     image: '/projects/MNaesens_slqogb',
-    tags: ['PHP', 'SCSS', 'VueJS', 'UIkit', 'Bootstrap', 'ProccesWire'],
+    tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'VueJS'],
     liveUrl: 'https://michaelnaessens.be/',
-    externalLink: 'https://www.indiegroup.be/',
   },
   {
     id: 'movie-app',
     title: 'The Movie App',
     label: 'Interaction Design',
-    //description:'An app that shows the latest movies with movie ratings and a searchbar to search for your favorite movies. This app is made with The Movie Database (TMDb) API. There is a light mode option as well, but it is based on the settings of your device/system where the dark mode or light mode is applied. This was a project I had to make in the class called Interaction Design, where we use CSS variables and make use of standard CSS and Vanilla JavaScript to display data and visualize it properly.',
     image: '/projects/movieapp_fu3f4p',
     githubUrl: 'https://github.com/HashmiShareeb/movieapp',
     liveUrl: 'https://hashmishareeb.github.io/movieapp/',
-    externalLink: 'https://www.themoviedb.org/',
-    tags: ['HTML', 'CSS', 'JavaScript', 'TheMovieDB API'],
+    tags: ['CSS', 'HTML', 'JavaScript', 'TheMovieDB API'],
+    // externalLink: 'https://www.themoviedb.org/',
     //ExtraImages: ['projects/themovieapp_rbjdme'],
   },
 ]

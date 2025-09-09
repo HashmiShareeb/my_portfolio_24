@@ -5,7 +5,7 @@ const components: MDXComponents = {
   ProjectWrapper,
   // You can add more custom components like
   // h1: (props) => <h1 className="text-2xl" {...props} />,
-  // p: (props) => <p className="text-lg" {...props} />,
+  p: props => <p className="mb-4" {...props} />,
 }
 
 export function useMDXComponents(): MDXComponents {

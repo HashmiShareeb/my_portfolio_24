@@ -1,5 +1,6 @@
-import { ProjectBanner } from '@/app/components/project/Banner'  
-  
+import { ProjectBanner } from '@/app/components/project/Banner'
+import Link from 'next/link'
+
 <ProjectBanner project={props} />
 
 {props.label && (
@@ -26,4 +27,4 @@ import { ProjectBanner } from '@/app/components/project/Banner'
 
 
 
-For this project, I made a timetable app that shows the timetable of each course (which is simulated). This app is made with Flutter, using the calender_view package to display the timetable. I also used firebase for the user authentication and firebase as the database to store the added event from each user. This was a project I had to make in the class called SmartApp Development, where we use Flutter and Dart to make a mobile application.
+For this project, I made a timetable app that shows the timetable of each course (which is simulated). This app is made with Flutter, using the <Link className='text-teal-500 dark:text-teal-400 hover:text-teal-300' target='_blank' rel='noopener noreferrer' href="https://pub.dev/packages/calendar_view">calender_view package</Link> to display the timetable. I also used firebase for the user authentication and firebase as the database to store the added event from each user. This was a project I had to make in the class called SmartApp Development, where we use Flutter and Dart to make a mobile application.
