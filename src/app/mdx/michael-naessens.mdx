@@ -1,0 +1,33 @@
+import { ProjectBanner } from '@/app/components/project/Banner'
+import Link from 'next/link'
+
+<ProjectBanner project={props} />
+
+{props.label && (
+  <span className="inline-block mb-4 px-3 py-1 text-sm font-semibold rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300">
+    {props.label}
+  </span>
+)}
+
+<h2 className="text-2xl font-bold mb-4">
+  <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
+     {props.title}
+  </span>
+</h2>
+
+{(props.tags ?? []).map(tag => (
+  <span
+    key={tag}
+    className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full mt-1 inline-block mr-2 mb-4 text-gray-800 dark:text-gray-200"
+  >
+    {tag}
+  </span>
+))}
+
+
+This was one of my first projects for a client named **Michael Naessens** who is a psychologist.
+During my Intership in <Link target='_blank' className='text-teal-500 dark:text-teal-400 hover:text-teal-300' rel='noopener noreferrer' href="https://www.indiegroup.be/">**Exsited** (now known as Indie Group)</Link> 
+I made this website with the use of a PHP-based CMS called ProccesWire along with SCSS, VueJS, and CSS frameworks such as UIkit and Bootstrap. 
+
+The focus for this project was to have a clean looking website to give the user a calm feeling
+when visisting the website and also make it easy to navigate and find the information they are looking for.

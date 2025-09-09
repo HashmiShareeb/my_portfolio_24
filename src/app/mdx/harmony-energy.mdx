@@ -1,0 +1,34 @@
+import { ProjectBanner } from '@/app/components/project/Banner'
+import Link from 'next/link'
+
+
+  <ProjectBanner project={props} />
+
+  {props.label && (
+    <span className="inline-block mb-4 px-3 py-1 text-sm font-semibold rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300">
+      {props.label}
+    </span>
+  )}
+
+
+  <h2 className="text-2xl font-bold mb-4">
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
+       {props.title}
+    </span>
+  </h2>
+
+  {(props.tags ?? []).map(tag => (
+    <span
+      key={tag}
+      className="px-3 py-1 text-xs sm:text-sm font-mono bg-gray-200 dark:bg-slate-800 rounded-full mt-1 inline-block mr-2 mb-4 text-gray-800 dark:text-gray-200"
+    >
+      {tag}
+    </span>
+  ))}
+
+During my internship at Harmony Energy, I contributed to both their  <a href="https://harmony.energy/" className='text-teal-500 dark:text-teal-400 hover:text-teal-300' target='_blank' rel="noopener noreferrer">**marketing website**</a> and their internal dashboard. I recreated the entire website using modern technologies such as Svelte, TypeScript, and Tailwind CSS, and implemented i18n using Svelte Stores for locale and language management. On the internal 'My Harmony Dashboard', I worked on multiple core features including the dynamic device management page, onboarding flow (with GoLang autodetection script), energy forecasting charts, and a logging component. I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements.
+
+
+
+![Test](https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/v1757185542/projects/routesummary_bpo3pippp_sf5rzi.jpg)
+

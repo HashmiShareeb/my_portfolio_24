@@ -1,3 +1,5 @@
+import createMDX from '@next/mdx'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -10,6 +12,13 @@ const nextConfig = {
       },
     ],
   },
-}
 
-export default nextConfig
+  // Support MDX files as pages:
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+}
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+  extension: /\.mdx?$/,
+})
+
+export default withMDX(nextConfig)
