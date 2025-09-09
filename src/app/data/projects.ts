@@ -14,7 +14,7 @@ const Data: ProjectData[] = [
     sections: [
       {
         title: 'Project Presentation',
-        image: '/projects/digitalpatienttwin',
+        image: 'projects/digitalpatienttwin',
         text: 'Me and my team had the honour to present this project at the Delaware HQ in Ghent, where we showcased the Digital Patient Twin to a large audience. The project was well-received, and we received positive feedback for our work.',
       },
     ],
