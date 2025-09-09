@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="z-[999] relative">
-      <div className="fixed top-0  h-[3.5rem] w-full bg-white dark:bg-slate-900 dark:bg-opacity-80 bg-opacity-80 shadow-sm dark:shadow-none">
+      <div className="fixed top-0 h-[3.5rem] w-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm shadow-sm dark:shadow-none">
         <div className="flex items-center justify-between h-full lg:px-52 px-4">
           <Link href="/" className="text-lg font-bold">
             Shareeb{' '}
@@ -89,41 +89,42 @@ const Navbar: React.FC = () => {
       <div
         className={`${
           isOpen ? 'block' : 'hidden'
-        } fixed top-[3.5rem] left-0 w-full h-screen bg-white dark:bg-slate-900 bg-opacity-80  dark:bg-opacity-80 bg-opacity-80  shadow-sm dark:shadow-none`}
+        } fixed top-[3.5rem] left-0 w-full h-screen bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm shadow-sm dark:shadow-none`}
       >
-        <div className="flex flex-col gap-10 items-center justify-center lg:h-full  h-3/4 pt-10 lg:pt-0">
+        <div className="flex flex-col gap-10 items-center justify-center lg:h-full h-3/4 pt-10 lg:pt-0">
           <Link
             href="/#home"
             onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive('home')}`}
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive(
+              'home',
+            )}`}
           >
             Home
           </Link>
-          {/* <Link
-            href="/#about"
-            onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive('about')}`}
-          >
-            about
-          </Link> */}
           <Link
             href="/#projects"
             onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive('projects')}`}
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive(
+              'projects',
+            )}`}
           >
             Projects
           </Link>
           <Link
             href="/#skills"
             onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive('skills')}`}
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive(
+              'skills',
+            )}`}
           >
             My Skills
           </Link>
           <Link
             href="/#contact"
             onClick={closeMenu}
-            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive('contact')}`}
+            className={`lg:text-6xl text-4xl font-bold uppercase hover:text-teal-300 transition-colors duration-200 ${isActive(
+              'contact',
+            )}`}
           >
             Contact
           </Link>
