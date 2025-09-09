@@ -15,7 +15,7 @@ const Contact = () => {
       <div className="grid place-items-center m-8">
         <GradientTitle title="Contact" IsCentered={true} />
         <div className="mt-4">
-          <p className="text-md text-center leading-relaxed  font-medium  dark:text-slate-400 lg:w-3/4 mx-auto">
+          <p className="text-md text-center leading-relaxed  font-medium  dark:text-slate-300 lg:w-3/4 mx-auto">
             I am always open to new opportunities and collaborations. Feel free
             to reach out to me if you have any questions or just want to say hi.
           </p>

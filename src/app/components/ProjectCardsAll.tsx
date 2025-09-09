@@ -45,7 +45,7 @@ const ProjectCards = () => {
                 </span>
               </h2>
               {project.label && (
-                <p className="mt-2 dark:text-slate-400  text-base font-medium">
+                <p className="mt-2 dark:text-slate-300 text-base font-medium">
                   {project.label}
                 </p>
               )}
