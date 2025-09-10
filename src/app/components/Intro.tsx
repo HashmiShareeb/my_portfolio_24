@@ -63,7 +63,7 @@ const Intro = () => {
           className="text-teal-500 underline hover:text-teal-300 transition-colors duration-100
          "
         >
-          Digitale Vormgeving{' '}
+          Digital Design{' '}
         </Link>{' '}
         (formerly known as Multimedia and Information Technologies) and recently
         earned my Bachelor&apos;s degree in{' '}
