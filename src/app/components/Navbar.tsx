@@ -41,8 +41,15 @@ const Navbar: React.FC = () => {
   }, [isOpen])
 
   return (
-    <nav className="z-[999] relative">
-      <div className="fixed top-0 h-[3.5rem] w-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm shadow-sm dark:shadow-none">
+    <nav className="relative">
+      <div
+        className={`fixed top-0 z-[1100] h-[3.5rem] w-full ${
+          isOpen
+            ? 'bg-transparent shadow-none backdrop-blur-0'
+            : 'bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm shadow-sm dark:shadow-none'
+        }`}
+      >
+        {' '}
         <div className="flex items-center justify-between h-full lg:px-52 px-4">
           <Link href="/" className="text-lg font-bold">
             Shareeb{' '}
@@ -86,12 +93,14 @@ const Navbar: React.FC = () => {
           </button>
         </div>
       </div>
+      {/* Mobile menu, show/hide based on menu state. */}
       <div
-        className={`${
-          isOpen ? 'block' : 'hidden'
-        } fixed top-[3.5rem] left-0 w-full h-screen bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm shadow-sm dark:shadow-none`}
+        className={`fixed top-0 left-0 z-[999] w-full h-screen bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm origin-top ${
+          isOpen ? 'block' : 'hidden '
+        }`}
       >
-        <div className="flex flex-col gap-10 items-center justify-center lg:h-full h-3/4 pt-10 lg:pt-0">
+        <div className="pt-[3.5rem] flex flex-col gap-10 items-center justify-center h-full">
+          {/* Menu items */}
           <Link
             href="/#home"
             onClick={closeMenu}
@@ -128,7 +137,7 @@ const Navbar: React.FC = () => {
           >
             Contact
           </Link>
-          <CTA href="/cv_shareeb_2025.pdf" target="_blank" download>
+          <CTA href="/cv_shareeb_2025_sep.pdf" target="_blank" download>
             <Download size={32} />
             <h1 className="text-lg font-bold ml-2">Download Resume</h1>
             <span className="sr-only">Resume</span>
