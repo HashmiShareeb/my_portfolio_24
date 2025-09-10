@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import CTA from './CTA'
 import { CldImage } from 'next-cloudinary'
 import { Download, Mail } from 'lucide-react'
+import Link from 'next/link'
 
 const Intro = () => {
   return (
@@ -55,23 +56,31 @@ const Intro = () => {
         Junior Full-stack Developer
       </h2>
       <p className="mb-10 mt-4 text-md leading-relaxed text-center dark:text-slate-300 font-medium">
-        I&apos;m a graduate in MIT currently studying{' '}
-        <a
-          href="https://mct.be/"
+        I&apos;m a graduate in{' '}
+        <Link
+          href="https://www.howest.be/nl/opleidingen/graduaat/digitale-vormgeving"
           target="_blank"
           className="text-teal-500 underline hover:text-teal-300 transition-colors duration-100
          "
         >
-          MCT Next Web Developer in Howest{'  '}
-        </a>
-        <br className="block md:hidden" />
-        in Belgium. I have a passion for web development and love to create new
-        things. I am a fast learner and always eager to learn something new and
-        face challenges!
+          Digitale Vormgeving{' '}
+        </Link>{' '}
+        (formerly known as Multimedia and Information Technologies) and recently
+        earned my Bachelor&apos;s degree in{' '}
+        <Link
+          href="https://mct.be/"
+          target="_blank"
+          className="text-teal-500 underline hover:text-teal-300 transition-colors duration-100"
+        >
+          Multimedia and Creative Technologies (MCT)
+        </Link>{' '}
+        as a Next Web Developer at Howest, Belgium. I have a passion for web
+        development and love creating new things.I am a fast learner and always
+        eager to learn something new and face challenges!
       </p>
 
       <div className="flex lg:flex-row selection  items-center justify-center gap-10">
-        <CTA href="/cv_shareeb_2025.pdf" target="_blank" download>
+        <CTA href="/cv_shareeb_2025_sep.pdf" target="_blank" download>
           <Download size={32} />
           <h1 className="text-lg font-bold ml-2">Download Resume</h1>
           <span className="sr-only">Resume</span>
