@@ -11,6 +11,7 @@ import MyPortfolio from '@/app/mdx/my-portfolio.mdx'
 import Harmony from '@/app/mdx/harmony-energy.mdx'
 import MovieApp from '@/app/mdx/movie-app.mdx'
 import MichaelN from '@/app/mdx/michael-naessens.mdx'
+import NexusFM from '@/app/mdx/nexus-fm.mdx'
 import { MDXProvider, useMDXComponents } from '@mdx-js/react'
 import { ProjectData } from '@/app/interfaces/projects.interface'
 import { ProjectWrapper } from '@/app/components/ProjectWrapper'
@@ -67,6 +68,12 @@ const projects: Record<string, { data: ProjectData; Content: any }> = {
       ...Data.find((p: { id: string }) => p.id === 'michael-naessens')!,
     },
     Content: MichaelN,
+  },
+  'nexus-fm': {
+    data: {
+      ...Data.find((p: { id: string }) => p.id === 'nexus-fm')!,
+    },
+    Content: NexusFM,
   },
 }
 

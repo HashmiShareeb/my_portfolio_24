@@ -160,6 +160,25 @@ const Data: ProjectData[] = [
     // externalLink: 'https://www.themoviedb.org/',
     //ExtraImages: ['projects/themovieapp_rbjdme'],
   },
+  {
+    id: 'nexus-fm',
+    title: 'Nexus FM',
+    label: 'Full-stack development ',
+    image: '/projects/Nexus_FM_cwqfbl',
+    // alphabetically align the tags
+    tags: [
+      'Docker',
+      'GraphQL',
+      'MongoDB',
+      'NestJS',
+      'TailwindCSS',
+      'TypeScript',
+      'Vue',
+      'Vue-Charts',
+    ],
+    githubUrl: 'https://github.com/HashmiShareeb/shareeb_afsd_fm2025',
+    featured: true,
+  },
 ]
 
 export default Data
