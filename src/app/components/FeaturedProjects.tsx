@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ProjectData } from '../interfaces/projects.interface'
@@ -9,7 +8,8 @@ import { ChevronRight } from 'lucide-react'
 import { getFeaturedProjects } from '@/utils/featured.projects'
 
 const FeaturedProjects = () => {
-  const featured = getFeaturedProjects(3)
+  const featured = getFeaturedProjects(4)
+
   return (
     <motion.section
       transition={{ delay: 0.2, duration: 0.5 }}
@@ -19,7 +19,7 @@ const FeaturedProjects = () => {
       id="projects"
       className="py-24 px-4 mx-auto lg:mx-0"
     >
-      <div className="flex lg:flex-row flex-col items-center ">
+      <div className="flex lg:flex-row flex-col items-center">
         <GradientTitle title="featured projects" IsCentered={false} />
         <Link
           href="/project"
@@ -34,17 +34,19 @@ const FeaturedProjects = () => {
           </span>
         </Link>
       </div>
-      <div className="mt-8 flex gap-4 lg:gap-10 flex-col lg:flex-row items-end lg:items-start">
+
+      {/* Grid Layout for Featured Projects */}
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {featured.map((project: ProjectData) => (
           <motion.div
-            className="py-2 relative group"
+            className="relative group"
             key={project.id}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="w-full">
+            <div className="w-full h-64">
               <CldImage
                 width={800}
                 height={600}
@@ -56,12 +58,6 @@ const FeaturedProjects = () => {
               />
             </div>
 
-            {/* {project.label && (
-                <span className="absolute top-4 left-4 px-3 py-1 text-xs font-bold rounded-full text-white bg-gradient-to-r from-teal-500 to-blue-600 shadow-lg">
-                  {project.label}
-                </span>
-              )} */}
-
             <div className="mt-4">
               <h2 className="text-2xl font-bold text-transparent">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
@@ -69,7 +65,7 @@ const FeaturedProjects = () => {
                 </span>
               </h2>
               {project.label && (
-                <p className="mt-2 dark:text-slate-300  text-base font-medium">
+                <p className="mt-2 dark:text-slate-300 text-base font-medium">
                   {project.label}
                 </p>
               )}
