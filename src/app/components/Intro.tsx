@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import CTA from './CTA'
 import { CldImage } from 'next-cloudinary'
-import { Download, Mail } from 'lucide-react'
+import { Download } from 'lucide-react'
 import Link from 'next/link'
 
 const Intro = () => {
@@ -37,7 +37,7 @@ const Intro = () => {
           }}
         >
           <CldImage
-            src="projects/qpggxcmd93hwgiisoakb"
+            src="self_portrait"
             alt="Shareeb portrait"
             width="400"
             height="400"

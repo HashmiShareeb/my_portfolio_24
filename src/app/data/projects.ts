@@ -5,7 +5,7 @@ const Data: ProjectData[] = [
     id: 'digital-patient-twin',
     title: 'Digital Patient Twin',
     label: 'Industry Project',
-    image: 'projects/Digital_Patient_Twin_hr0whf',
+    image: 'Digital_Patient_Twin',
     tags: ['Azure', 'CosmosDB', 'Dapr', 'Microservices', 'Nuxt', 'TypeScript'],
     githubUrl: 'https://github.com/JarneDel/digital-patient-twin-frontend',
     folderUrl: '/FA02.pdf',
@@ -14,7 +14,7 @@ const Data: ProjectData[] = [
     sections: [
       {
         title: 'Project Presentation',
-        image: 'projects/digitalpatienttwin',
+        image: 'digitalpatienttwin',
         text: 'Me and my team had the honour to present this project at the Delaware HQ in Ghent, where we showcased the Digital Patient Twin to a large audience. The project was well-received, and we received positive feedback for our work.',
       },
     ],
@@ -23,7 +23,7 @@ const Data: ProjectData[] = [
     id: 'timetable-app',
     title: 'TimeTable App',
     label: 'SmartApp Development',
-    image: '/projects/ifzri2p4xyvtvhmqdczf',
+    image: 'timetable_app',
     videoUrl:
       'https://drive.google.com/file/d/1X1Y6rSPLK4fZPHOgxgoZLFMUVkJNk4iM/view',
     githubUrl: 'https://github.com/HashmiShareeb/smartapp_project24',
@@ -33,7 +33,7 @@ const Data: ProjectData[] = [
     id: 'my-portfolio',
     title: 'My Portfolio',
     label: 'Frontend Development',
-    image: '/projects/My_portfolio-lightmode',
+    image: 'My_portfolio-lightmode',
     tags: [
       'Cloudinary',
       'Framer Motion',
@@ -44,12 +44,12 @@ const Data: ProjectData[] = [
       'Vercel',
     ],
     githubUrl: 'https://github.com/HashmiShareeb/my_portfolio_24',
-    gallery: ['/projects/my_portfolio_dm', '/projects/my_portfolio_lm'],
+    gallery: ['my_portfolio_dm_display', 'my_portfolio_lm'],
   },
   {
     id: 'blitx',
     title: 'Blitx – Robottaxi Dashboard',
-    image: '/projects/Bachelor_Proef_zwj5zi',
+    image: 'Bachelor_Proef',
     label: 'Research Project',
     // alphabetically align the tags
     tags: [
@@ -78,7 +78,7 @@ const Data: ProjectData[] = [
       {
         title: 'Frontend',
         text: 'Built with Vue 3 and Vite, using Pinia and LocalStorage for state management and Axios for API communication. The dashboard features secure navigation via Vue Router guards, responsive CRUD views for vehicles andrides, and a clear separation between the user roles. The user can request rides and the route backend fetches the coordinates with the mapbox map and draws the routes.',
-        image: 'projects/routesummary_ponmty',
+        image: 'routesummary',
       },
       {
         title: 'Backend',
@@ -90,10 +90,7 @@ const Data: ProjectData[] = [
       },
     ],
     githubUrl: 'https://github.com/HashmiShareeb/researchproject_backend',
-    gallery: [
-      '/projects/Screenshot_2025-08-30_221945_alcyou',
-      '/projects/Screenshot_2025-08-30_221416_eikydn',
-    ],
+    gallery: ['vehicle_list', 'ridehistory_dm'],
 
     featured: true,
   },
@@ -101,12 +98,12 @@ const Data: ProjectData[] = [
     id: 'harmony-energy',
     title: 'Harmony Energy',
     label: 'Internship',
-    image: '/projects/Harmony_Energy_lhljgf',
+    image: 'My_Harmony_Energy',
 
     sections: [
       {
         title: 'Marketing Website',
-        image: '2025-06-10_13.40.53_harmony.energy_24c07fcd9430_hyueuo',
+        image: 'marketingsite_harmony',
         text: 'I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process. I also got the freedom to make my own layout as my intership mentor was impressed by my UI/UX and frontend skills, it was a fun project to work on and a good introduction on using Svelte which may come in handy for future projects 😉.',
       },
 
@@ -136,7 +133,7 @@ const Data: ProjectData[] = [
   {
     id: 'deborah-lintermans',
     title: 'Honden Coach Deborah Lintermans',
-    image: '/projects/Deborah_Lintermans',
+    image: 'Deborah_Lintermans',
     label: 'Internship',
     tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'VueJS'],
     liveUrl: 'https://deborahlintermans.be/',
@@ -145,7 +142,7 @@ const Data: ProjectData[] = [
     id: 'michael-naessens',
     title: 'Michael Naessens',
     label: 'Internship',
-    image: '/projects/MNaesens_slqogb',
+    image: 'MNaesens',
     tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'VueJS'],
     liveUrl: 'https://michaelnaessens.be/',
   },
@@ -153,12 +150,33 @@ const Data: ProjectData[] = [
     id: 'movie-app',
     title: 'The Movie App',
     label: 'Interaction Design',
-    image: '/projects/movieapp_fu3f4p',
+    image: 'movieapp',
     githubUrl: 'https://github.com/HashmiShareeb/movieapp',
     liveUrl: 'https://hashmishareeb.github.io/movieapp/',
     tags: ['CSS', 'HTML', 'JavaScript', 'TheMovieDB API'],
     // externalLink: 'https://www.themoviedb.org/',
     //ExtraImages: ['projects/themovieapp_rbjdme'],
+  },
+  {
+    id: 'nexus-fm',
+    title: 'Nexus FM',
+    label: 'Full-stack development ',
+    image: 'NexusFM_eqeu7k',
+    // alphabetically align the tags
+    tags: [
+      'Docker',
+      'GraphQL',
+      'MongoDB',
+      'NestJS',
+      'Monorepo',
+      'TailwindCSS',
+      'TypeScript',
+      'Vue',
+      'Vue-Charts',
+    ],
+    githubUrl: 'https://github.com/HashmiShareeb/shareeb_afsd_fm2025',
+    featured: true,
+    gallery: ['nexus_fm_admin', 'nexus_fm_manageprop', 'nexus_fm_asignrounds'],
   },
 ]
 

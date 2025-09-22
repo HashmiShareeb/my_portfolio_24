@@ -21,7 +21,7 @@ export const Section = ({ section }: { section: any }) => {
         }
       >
         {section.title && (
-          <h3 className="text-2xl font-semibold text-teal-500 mb-3">
+          <h3 className="text-xl font-semibold text-teal-500 dark:text-teal-400 mb-3">
             {section.title}
           </h3>
         )}
