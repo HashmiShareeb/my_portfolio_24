@@ -8,7 +8,7 @@ import { ChevronRight } from 'lucide-react'
 import { getFeaturedProjects } from '@/utils/featured.projects'
 
 const FeaturedProjects = () => {
-  const featured = getFeaturedProjects(4)
+  const featured = getFeaturedProjects(3)
 
   return (
     <motion.section
