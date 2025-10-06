@@ -25,7 +25,7 @@ const Projects = () => {
 
       <GradientTitle
         title="Projects"
-        description="some projects are still in development!"
+        description="some projects are still in development! To view more projects, visit my GitHub profile."
       />
       <ProjectCards />
     </div>

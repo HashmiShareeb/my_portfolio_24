@@ -20,16 +20,6 @@ const Data: ProjectData[] = [
     ],
   },
   {
-    id: 'timetable-app',
-    title: 'TimeTable App',
-    label: 'SmartApp Development',
-    image: 'timetable_app',
-    videoUrl:
-      'https://drive.google.com/file/d/1X1Y6rSPLK4fZPHOgxgoZLFMUVkJNk4iM/view',
-    githubUrl: 'https://github.com/HashmiShareeb/smartapp_project24',
-    tags: ['Dart', 'Firebase', 'Firestore', 'Flutter'],
-  },
-  {
     id: 'my-portfolio',
     title: 'My Portfolio',
     label: 'Frontend Development',
@@ -131,6 +121,41 @@ const Data: ProjectData[] = [
     // gallery: ['projects/Harmony_Energy_ooomjf'],
   },
   {
+    id: 'nexus-fm',
+    title: 'Nexus FM',
+    label: 'Full-stack development ',
+    image: 'NexusFM_eqeu7k',
+    // alphabetically align the tags
+    tags: [
+      'Docker',
+      'GraphQL',
+      'MongoDB',
+      'NestJS',
+      'Monorepo',
+      'TailwindCSS',
+      'TypeScript',
+      'Vue',
+      'Vue-Charts',
+    ],
+    githubUrl: 'https://github.com/HashmiShareeb/shareeb_afsd_fm2025',
+    featured: true,
+    gallery: [
+      'building_page_admin',
+      'nexus_fm_manageprop',
+      'nexus_fm_asignrounds',
+    ],
+  },
+  {
+    id: 'timetable-app',
+    title: 'TimeTable App',
+    label: 'SmartApp Development',
+    image: 'Time_Table_App',
+    videoUrl:
+      'https://drive.google.com/file/d/1X1Y6rSPLK4fZPHOgxgoZLFMUVkJNk4iM/view',
+    githubUrl: 'https://github.com/HashmiShareeb/smartapp_project24',
+    tags: ['Dart', 'Firebase', 'Firestore', 'Flutter'],
+  },
+  {
     id: 'deborah-lintermans',
     title: 'Honden Coach Deborah Lintermans',
     image: 'Deborah_Lintermans',
@@ -156,27 +181,6 @@ const Data: ProjectData[] = [
     tags: ['CSS', 'HTML', 'JavaScript', 'TheMovieDB API'],
     // externalLink: 'https://www.themoviedb.org/',
     //ExtraImages: ['projects/themovieapp_rbjdme'],
-  },
-  {
-    id: 'nexus-fm',
-    title: 'Nexus FM',
-    label: 'Full-stack development ',
-    image: 'NexusFM_eqeu7k',
-    // alphabetically align the tags
-    tags: [
-      'Docker',
-      'GraphQL',
-      'MongoDB',
-      'NestJS',
-      'Monorepo',
-      'TailwindCSS',
-      'TypeScript',
-      'Vue',
-      'Vue-Charts',
-    ],
-    githubUrl: 'https://github.com/HashmiShareeb/shareeb_afsd_fm2025',
-    featured: true,
-    gallery: ['nexus_fm_admin', 'nexus_fm_manageprop', 'nexus_fm_asignrounds'],
   },
 ]
 

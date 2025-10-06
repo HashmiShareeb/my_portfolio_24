@@ -5,40 +5,36 @@ import { CldImage } from 'next-cloudinary'
 export const ProjectGallery = ({ project }: { project: ProjectData }) => {
   return (
     (project.gallery?.length ?? 0) > 0 && (
-      <motion.div
-        className="mt-6"
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {/* <h3 className="text-lg font-semibold text-teal-400 mb-4">
-            More Images
-          </h3> */}
-        <div
-          className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
-          style={{ columnGap: '1.5rem' }}
-        >
-          {(project.gallery ?? []).map((img: string, idx: number) => (
-            <motion.div
+      <div className="mt-4 grid grid-cols-12 gap-4 md:gap-8 lg:my-10 lg:gap-16">
+        {(project.gallery ?? []).map((img: string, idx: number) => {
+          // Alternate col-start for staggered layout
+          const colStart = idx % 2 === 0 ? 'lg:col-start-3' : 'lg:col-start-1'
+          return (
+            <div
               key={idx}
-              className="break-inside-avoid mb-6"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: idx * 0.08 }}
-              viewport={{ once: true, amount: 0.2 }}
+              className={`col-span-full lg:col-span-10 ${colStart}`}
             >
-              <CldImage
-                src={img}
-                alt={`Extra ${idx + 1}`}
-                width={600}
-                height={400}
-                className="rounded-xl shadow-lg w-full h-auto"
-              />
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <CldImage
+                  src={img}
+                  alt={`Extra ${idx + 1}`}
+                  width={500}
+                  height={400}
+                  quality={100}
+                  priority
+                  sizes="100vw"
+                  className="rounded-xl shadow-lg w-full h-auto dark:border dark:border-slate-700"
+                />
+              </motion.div>
+            </div>
+          )
+        })}
+      </div>
     )
   )
 }

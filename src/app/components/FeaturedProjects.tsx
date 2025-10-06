@@ -53,8 +53,8 @@ const FeaturedProjects = () => {
                 src={project.image}
                 alt={project.title}
                 quality={100}
-                priority={true}
-                className="rounded-xl object-cover object-center shadow-lg dark:shadow-none w-full h-full transform transition-transform duration-300 group-hover:scale-105"
+                priority
+                className="rounded-xl shadow-lg dark:shadow-none w-full h-full transform transition-transform duration-300 group-hover:scale-105"
               />
             </div>
 
