@@ -59,7 +59,7 @@ const Data: ProjectData[] = [
       {
         title: 'Hexagonal Architecture',
         image: '/images/hexagonal_architecture.png',
-        text: 'Hexagonal architecture, also known as "Ports and Adapters" or DDD (Domain-Driven Design), is a software architecture aimed at isolating the core of the application (domain logic) from external systems such as databases, frameworks, user interfaces, and container technologies like Docker. This architecture establishes a clear separation between internal domains and external components by using well-defined interfaces (Ports) and implementations of these interfaces to interact with external systems (Adapters).',
+        text: 'Hexagonal architecture, also known as "Ports and Adapters", is a software architecture aimed at isolating the core of the application (domain logic) from external systems such as databases, frameworks, user interfaces, and container technologies like Docker. This architecture establishes a clear separation between internal domains and external components by using well-defined interfaces (Ports) and implementations of these interfaces to interact with external systems like the frontend for example (Adapters).',
       },
       {
         title: 'User Roles',
@@ -68,7 +68,6 @@ const Data: ProjectData[] = [
       {
         title: 'Frontend',
         text: 'Built with Vue 3 and Vite, using Pinia and LocalStorage for state management and Axios for API communication. The dashboard features secure navigation via Vue Router guards, responsive CRUD views for vehicles andrides, and a clear separation between the user roles. The user can request rides and the route backend fetches the coordinates with the mapbox map and draws the routes.',
-        image: 'routesummary',
       },
       {
         title: 'Backend',
@@ -80,7 +79,7 @@ const Data: ProjectData[] = [
       },
     ],
     githubUrl: 'https://github.com/HashmiShareeb/researchproject_backend',
-    gallery: ['vehicle_list', 'ridehistory_dm'],
+    gallery: ['routesummary', 'vehicle_list', 'ridehistory_dm'],
 
     featured: true,
   },
