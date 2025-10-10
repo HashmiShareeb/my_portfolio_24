@@ -38,7 +38,7 @@ const Data: ProjectData[] = [
   },
   {
     id: 'blitx',
-    title: 'Blitx – Robottaxi Dashboard',
+    title: 'Blitx',
     image: 'Bachelor_Proef',
     label: 'Research Project',
     // alphabetically align the tags
