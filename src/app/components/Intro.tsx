@@ -75,7 +75,7 @@ const Intro = () => {
           Multimedia and Creative Technologies (MCT)
         </Link>{' '}
         as a Next Web Developer at Howest, Belgium. I have a passion for web
-        development and love creating new things.I am a fast learner and always
+        development and love creating new things. I am a fast learner and always
         eager to learn something new and face challenges!
       </p>
 
