@@ -19,7 +19,7 @@ const Intro = () => {
         y: 10,
       }}
       id="#home"
-      className="min-h-screen flex flex-col items-center justify-center max-w-xl mx-auto px-4"
+      className="min-h-screen flex flex-col items-center justify-center max-w-xl mx-auto px-4 text-center pt-20 lg:py-0"
     >
       <div className="flex flex-col items-center justify-center">
         <motion.div
@@ -49,7 +49,24 @@ const Intro = () => {
       </div>
 
       {/* Introduction */}
-      <span className="mb-4 font-mono lg:text-xl">👋 Hello there!</span>
+      <span className="mb-4 font-mono lg:text-xl">
+        <motion.span
+          className="inline-block mr-2"
+          initial={{ rotate: 0 }}
+          animate={{ rotate: [0, 20, -15, 20, -15, 0] }}
+          transition={{
+            duration: 1.2,
+            ease: 'easeInOut',
+            repeat: Infinity,
+            repeatDelay: 2,
+          }}
+          style={{ transformOrigin: '70% 70%' }}
+          aria-hidden="true"
+        >
+          👋
+        </motion.span>
+        Hello there!
+      </span>
       <h1 className="lg:text-6xl md:text-4xl text-3xl text-nowrap font-extrabold leading-relaxed tracking-tight">
         Shareeb Hashmi
       </h1>
