@@ -49,7 +49,7 @@ const Intro = () => {
       </div>
 
       {/* Introduction */}
-      <span className="mb-4 font-mono text-xl">👋 Hello there!</span>
+      <span className="mb-4 font-mono lg:text-xl">👋 Hello there!</span>
       <h1 className="lg:text-6xl md:text-4xl text-3xl text-nowrap font-extrabold leading-relaxed tracking-tight">
         Shareeb Hashmi
       </h1>
