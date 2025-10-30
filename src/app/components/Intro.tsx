@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import CTA from './CTA'
 import { CldImage } from 'next-cloudinary'
-import { Download } from 'lucide-react'
+import { Download, GraduationCap, SearchIcon } from 'lucide-react'
 import Link from 'next/link'
 
 const Intro = () => {
@@ -48,54 +48,58 @@ const Intro = () => {
         </motion.div>
       </div>
 
-      <span className="mb-4 font-mono">👋 Hello there!</span>
+      {/* Introduction */}
+      <span className="mb-4 font-mono text-xl">👋 Hello there!</span>
       <h1 className="lg:text-6xl md:text-4xl text-3xl text-nowrap font-extrabold leading-relaxed tracking-tight">
         Shareeb Hashmi
       </h1>
       <h2 className="mt-4 text-2xl lg:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 dark:from-teal-300 dark:via-cyan-400 dark:to-blue-400">
         Junior Full-stack Developer
       </h2>
-      <p className="mb-10 mt-4 text-md leading-relaxed text-center dark:text-slate-300 font-medium">
-        I&apos;m a graduate in{' '}
-        <Link
-          href="https://www.howest.be/nl/opleidingen/graduaat/digitale-vormgeving"
-          target="_blank"
-          className="text-teal-500 underline hover:text-teal-300 transition-colors duration-100
-         "
-        >
-          Digital Design{' '}
-        </Link>{' '}
-        (formerly known as Multimedia and Information Technologies) and recently
-        earned my Bachelor&apos;s degree in{' '}
-        <Link
-          href="https://mct.be/"
-          target="_blank"
-          className="text-teal-500 underline hover:text-teal-300 transition-colors duration-100"
-        >
-          Multimedia and Creative Technologies (MCT)
-        </Link>{' '}
-        as a Next Web Developer at Howest, Belgium. I have a passion for web
-        development and love creating new things. I am a fast learner and always
-        eager to learn something new and face challenges!
+      <p className="mb-8 mt-4 text-md leading-relaxed text-center dark:text-slate-300 font-medium">
+        I have a passion for web development and love creating new things. I am
+        a fast learner and always eager to learn something new and face
+        challenges!
       </p>
 
+      {/* Education & work */}
+      <div className="mb-12 text-sm md:text-md dark:text-slate-300 flex flex-col md:flex-row items-center justify-center gap-4">
+        <p className="w-full md:w-auto flex-1 max-w-prose text-center">
+          <GraduationCap className="inline mb-1 mr-1" size={16} />
+          Recent graduate:{' '}
+          <strong>
+            Bachelor&apos;s Multimedia and Creative Technologies{' '}
+            <Link
+              href="https://mct.be/"
+              target="_blank"
+              className="underline hover:text-teal-300 transition-colors duration-100"
+            >
+              (MCT)
+            </Link>
+          </strong>
+        </p>
+
+        <span
+          className="hidden md:block h-6 border-l border-teal-300 dark:border-teal-600 mx-4"
+          role="separator"
+          aria-orientation="vertical"
+        ></span>
+
+        <p className="w-full md:w-auto flex-1 max-w-prose text-center">
+          <SearchIcon className="inline mb-1 mr-1" size={16} />
+          Looking for opportunities to grow as a{' '}
+          <strong>Full-stack Developer</strong> and{' '}
+          <strong>UI/UX Designer</strong>.
+        </p>
+      </div>
+
+      {/* CTA */}
       <div className="flex lg:flex-row selection  items-center justify-center gap-10">
         <CTA href="/cv_shareeb_2025_1.pdf" target="_blank" download>
           <Download size={32} />
           <h1 className="text-lg font-bold ml-2">Download Resume</h1>
           <span className="sr-only">Resume</span>
         </CTA>
-
-        {/* <a
-          href="/cv_shareeb_2025.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-          className="group inline transition duration-300"
-        >
-          Download Resume
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 dark:bg-white bg-black"></span>
-        </a> */}
       </div>
     </motion.section>
   )
