@@ -95,11 +95,6 @@ const Data: ProjectData[] = [
         image: 'marketingsite_harmony',
         text: 'I completely recreated the marketing website using Svelte, TypeScript, and Tailwind CSS. I implemented i18n using Svelte Stores to manage locales, which was a huge challenge at first but with using reactivity that Svelte 5 provides this was ultimately a smooth process. I also got the freedom to make my own layout as my intership mentor was impressed by my UI/UX and frontend skills, it was a fun project to work on and a good introduction on using Svelte which may come in handy for future projects 😉.',
       },
-
-      {
-        title: 'My Harmony Dashboard',
-        text: 'On the internal dashboard I worked on multiple core features including the dynamic device management page, onboarding flow (with GoLang autodetection script), energy forecasting charts, and a logging component. I also recreated complex KPI and monitoring graphs using Grafana and custom HTML panels. Throughout the project, I focused on clean code structure, API integration, and user experience improvements. This was a great learning experience as I got to work with different technologies and frameworks, and also got to understand how a real-world application is built and maintained.',
-      },
     ],
 
     tags: [
@@ -116,8 +111,9 @@ const Data: ProjectData[] = [
     ],
 
     otherFile: '/Harmony Brochure.pdf',
+    liveUrl: 'https://harmony.energy/',
     featured: true,
-    // gallery: ['projects/Harmony_Energy_ooomjf'],
+    gallery: ['graphprices_iai6af_ipzat2', 'kpichart_r5fdnn_nhgcbn'],
   },
   {
     id: 'nexus-fm',
@@ -156,7 +152,7 @@ const Data: ProjectData[] = [
   },
   {
     id: 'deborah-lintermans',
-    title: 'Honden Coach Deborah Lintermans',
+    title: 'Hondencoach Deborah Lintermans',
     image: 'Deborah_Lintermans',
     label: 'Internship',
     tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'VueJS'],

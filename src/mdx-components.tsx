@@ -11,7 +11,13 @@ const components: MDXComponents = {
       {...props}
     />
   ),
-  p: props => <p className="mb-4" {...props} />,
+  h3: props => (
+    <h3
+      className="text-lg font-semibold text-teal-500 dark:text-teal-400 mb-3 mt-4"
+      {...props}
+    />
+  ),
+  p: props => <p className="mb-6 mt-4" {...props} />,
 }
 
 export function useMDXComponents(): MDXComponents {
