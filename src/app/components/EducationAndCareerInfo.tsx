@@ -1,7 +1,7 @@
 import { GraduationCap, SearchIcon } from 'lucide-react'
 import Link from 'next/link'
 
-const EducationInfo = () => {
+const EducationAndCareerInfo = () => {
   return (
     <div className="mb-12 text-sm md:text-md dark:text-slate-300 flex flex-col md:flex-row items-center justify-center gap-4">
       <p className="w-full md:w-auto flex-1 max-w-prose text-center">
@@ -35,4 +35,4 @@ const EducationInfo = () => {
   )
 }
 
-export default EducationInfo
+export default EducationAndCareerInfo

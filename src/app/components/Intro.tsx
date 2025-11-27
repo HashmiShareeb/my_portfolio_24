@@ -3,9 +3,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import CTA from './CTA'
 import { CldImage } from 'next-cloudinary'
-import { Download, GraduationCap, SearchIcon } from 'lucide-react'
-import Link from 'next/link'
-import EducationInfo from './EducationInfo'
+import { Download } from 'lucide-react'
+
+import EducationAndCareerInfo from './EducationAndCareerInfo'
 
 const Intro = () => {
   return (
@@ -81,7 +81,7 @@ const Intro = () => {
       </p>
 
       {/* Education & work */}
-      <EducationInfo />
+      <EducationAndCareerInfo />
 
       {/* CTA */}
       <div className="flex lg:flex-row selection  items-center justify-center gap-10">
