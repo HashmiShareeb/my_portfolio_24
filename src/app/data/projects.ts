@@ -53,7 +53,7 @@ const Data: ProjectData[] = [
       'REST API',
       'Spring Boot',
       'Spring Security',
-      'Vue 3',
+      'Vue.js',
     ],
     sections: [
       {
@@ -129,7 +129,7 @@ const Data: ProjectData[] = [
       'Monorepo',
       'TailwindCSS',
       'TypeScript',
-      'Vue',
+      'Vue.js',
       'Vue-Charts',
     ],
     githubUrl: 'https://github.com/HashmiShareeb/shareeb_afsd_fm2025',
@@ -155,7 +155,7 @@ const Data: ProjectData[] = [
     title: 'Hondencoach Deborah Lintermans',
     image: 'Deborah_Lintermans',
     label: 'Internship',
-    tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'VueJS'],
+    tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'Vue.js'],
     liveUrl: 'https://deborahlintermans.be/',
   },
   {
@@ -163,7 +163,7 @@ const Data: ProjectData[] = [
     title: 'Michael Naessens',
     label: 'Internship',
     image: 'MNaesens',
-    tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'VueJS'],
+    tags: ['BEM', 'Bootstrap', 'PHP', 'ProccesWire', 'SCSS', 'UIkit', 'Vue.js'],
     liveUrl: 'https://michaelnaessens.be/',
   },
   {
