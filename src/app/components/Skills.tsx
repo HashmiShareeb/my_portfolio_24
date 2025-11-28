@@ -6,21 +6,6 @@ import { motion } from 'framer-motion'
 import { TechStackData } from '../data/languagesandskillsdata'
 
 //custom motion animation
-// const fadeIn = {
-//   initial: {
-//     y: 60,
-//     opacity: 0,
-//   },
-//   //? function animate for each skill item induvidually
-//   animate: (index: number) => ({
-//     y: 0,
-//     opacity: 1,
-//     transition: {
-//       delay: index * 0.1,
-//     },
-//   }),
-// }
-
 const skillsAnimation = {
   hidden: { y: 24, opacity: 0 },
   visible: (i: number) => ({
@@ -72,8 +57,7 @@ const Skills = () => {
             ))}
           </div>
         </div>
-
-        <ul className="lg:mt-8 mt-4 md:flex gap-4 md:flex-wrap md:justify-center dark:text-slate-400 grid grid-cols-3 text-center">
+        <ul className="lg:mt-8 mt-4 flex gap-4 flex-wrap justify-center dark:text-slate-400 ">
           {TechStackData[activeCategory].map((skill, index) => (
             <motion.li
               key={`${skill}-${index}`}
